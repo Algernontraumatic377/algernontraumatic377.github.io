@@ -1,1000 +1,143 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Masoud Valizadeh — Technical Delivery Lead & Scrum Master</title>
-  <meta name="description" content="Executive technical portfolio of Masoud Valizadeh. Flow Engineering, Anti-Agile Theater, and High-Throughput Delivery Architecture." />
-
-  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #09090b;
-      --bg-subtle: #111114;
-      --surface: #141417;
-      --surface-hover: #1a1a1f;
-      --surface-elevated: #202026;
-      --border: rgba(255, 255, 255, 0.07);
-      --border-strong: rgba(255, 255, 255, 0.18);
-      --text-high: #f4f4f5;
-      --text-mid: #a1a1aa;
-      --text-low: #52525b;
-      --accent: #ffffff;
-      --accent-invert: #09090b;
-      --bronze: #d4af37;
-      --bronze-bg: rgba(212, 175, 55, 0.05);
-      --bronze-border: rgba(212, 175, 55, 0.25);
-      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --radius-sm: 6px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    [data-theme="light"] {
-      --bg: #fbfbfb;
-      --bg-subtle: #f3f3f2;
-      --surface: #ffffff;
-      --surface-hover: #f5f5f4;
-      --surface-elevated: #eaeaea;
-      --border: rgba(0, 0, 0, 0.08);
-      --border-strong: rgba(0, 0, 0, 0.2);
-      --text-high: #121215;
-      --text-mid: #52525b;
-      --text-low: #a1a1aa;
-      --accent: #121215;
-      --accent-invert: #ffffff;
-      --bronze: #996515;
-      --bronze-bg: rgba(153, 101, 21, 0.05);
-      --bronze-border: rgba(153, 101, 21, 0.22);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: var(--font-sans);
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text-high);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      transition: background-color 0.25s ease, color 0.25s ease;
-    }
-
-    .container {
-      max-width: 1260px;
-      margin: 0 auto;
-      padding: 0 1.75rem;
-    }
-
-    /* Fixed Minimalist Navbar */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(9, 9, 11, 0.85);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-    }
-    [data-theme="light"] nav {
-      background: rgba(251, 251, 251, 0.88);
-    }
-    .nav-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 68px;
-    }
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: var(--text-high);
-      font-weight: 800;
-      font-size: 0.95rem;
-      letter-spacing: -0.02em;
-    }
-    .brand-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 1px solid var(--border-strong);
-      object-fit: cover;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2.2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--text-mid);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-    .nav-links a:hover {
-      color: var(--text-high);
-    }
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-    }
-    .btn-icon {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-high);
-      height: 36px;
-      padding: 0 0.85rem;
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: var(--transition);
-    }
-    .btn-icon:hover {
-      border-color: var(--border-strong);
-      background: var(--surface-hover);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 145px 0 75px;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.35fr 0.65fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    .badge-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.35rem 0.85rem;
-      border-radius: 99px;
-      border: 1px solid var(--border-strong);
-      color: var(--text-high);
-      margin-bottom: 1.5rem;
-    }
-    .status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--text-high);
-    }
-    .hero-title {
-      font-size: clamp(2.6rem, 5.2vw, 4.6rem);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-    }
-    .hero-title span.dim {
-      color: var(--text-low);
-      font-weight: 400;
-    }
-    .hero-desc {
-      color: var(--text-mid);
-      font-size: 1.1rem;
-      line-height: 1.75;
-      max-width: 640px;
-      margin-bottom: 2.2rem;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .btn {
-      padding: 0.85rem 1.8rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    .btn-solid {
-      background: var(--accent);
-      color: var(--accent-invert);
-      border: 1px solid var(--accent);
-    }
-    .btn-solid:hover {
-      opacity: 0.88;
-      transform: translateY(-1px);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--text-high);
-      border: 1px solid var(--border-strong);
-    }
-    .btn-outline:hover {
-      background: var(--surface);
-      border-color: var(--text-high);
-      transform: translateY(-1px);
-    }
-
-    /* Executive Portrait Card */
-    .portrait-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-    .portrait-frame {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--border-strong);
-      background: #000;
-    }
-    .portrait-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: grayscale(100%) contrast(108%);
-      transition: var(--transition);
-    }
-    .portrait-frame:hover img {
-      filter: grayscale(0%);
-    }
-    .profile-specs {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-    }
-    .spec-item {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .spec-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    .spec-key { color: var(--text-low); }
-    .spec-val { color: var(--text-high); font-weight: 500; }
-
-    /* National Award Monolith */
-    .award-card {
-      margin: 4.5rem 0;
-      background: var(--bronze-bg);
-      border: 1px solid var(--bronze-border);
-      border-radius: var(--radius-lg);
-      padding: 2.2rem 2.8rem;
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-    .award-badge {
-      font-family: var(--font-mono);
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--bronze);
-      line-height: 1;
-    }
-    .award-content h3 {
-      font-size: 1.3rem;
-      font-weight: 750;
-      color: var(--text-high);
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.02em;
-    }
-    .award-content p {
-      color: var(--text-mid);
-      font-size: 0.94rem;
-      line-height: 1.65;
-    }
-
-    /* Interactive Flow Inspector (Card-based benchmarks) */
-    .flow-inspector {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 2.2rem;
-      margin-bottom: 6rem;
-    }
-    .inspector-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 1.75rem;
-    }
-    .inspector-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-    }
-    .metric-tabs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-    .metric-tab {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 1.4rem;
-      cursor: pointer;
-      transition: var(--transition);
-      text-align: left;
-    }
-    .metric-tab:hover, .metric-tab.active {
-      border-color: var(--border-strong);
-      background: var(--surface-elevated);
-    }
-    .metric-tab.active {
-      border-left: 3px solid var(--accent);
-    }
-    .metric-tab-label {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-low);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .metric-tab-val {
-      font-family: var(--font-mono);
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: var(--text-high);
-      margin: 0.45rem 0 0.25rem;
-    }
-    .metric-tab-desc {
-      font-size: 0.82rem;
-      color: var(--text-mid);
-      line-height: 1.5;
-    }
-
-    /* Section Headers */
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 2.5rem;
-    }
-    .section-head-num {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-low);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.4rem;
-    }
-    .section-head-title {
-      font-size: 2.2rem;
-      font-weight: 850;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-    }
-
-    /* Bento Grid: Case Dossiers */
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 6rem;
-    }
-    .bento-cell {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 2.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition);
-      position: relative;
-    }
-    .bento-cell:hover {
-      border-color: var(--border-strong);
-      background: var(--surface-hover);
-    }
-    .cell-8 { grid-column: span 8; }
-    .cell-4 { grid-column: span 4; }
-    .cell-12 { grid-column: span 12; }
-
-    .chip-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 1.25rem;
-    }
-    .chip {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      padding: 0.25rem 0.65rem;
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border);
-      color: var(--text-mid);
-    }
-    .bento-cell h3 {
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.75rem;
-    }
-    .bento-cell p {
-      color: var(--text-mid);
-      font-size: 0.94rem;
-      line-height: 1.7;
-    }
-
-    /* Monospace Code Preview Inspector */
-    .code-block {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.1rem 1.35rem;
-      margin-top: 1.4rem;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-mid);
-      line-height: 1.6;
-    }
-    .code-block .key { color: var(--text-high); font-weight: 600; }
-    .code-block .val { color: var(--text-high); }
-    .code-block .comment { color: var(--text-low); }
-
-    .stat-bar {
-      display: flex;
-      align-items: baseline;
-      gap: 0.85rem;
-      margin-top: 1.5rem;
-      padding-top: 1.2rem;
-      border-top: 1px solid var(--border);
-    }
-    .stat-bar-val {
-      font-family: var(--font-mono);
-      font-size: 1.9rem;
-      font-weight: 850;
-      color: var(--text-high);
-      line-height: 1;
-    }
-    .stat-bar-label {
-      font-size: 0.8rem;
-      color: var(--text-low);
-    }
-
-    /* Organization Ledger Columns */
-    .ledger-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      margin-top: 1.6rem;
-    }
-    .ledger-box {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.2rem;
-    }
-    .ledger-box-title {
-      font-family: var(--font-mono);
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--text-high);
-      margin-bottom: 0.4rem;
-    }
-    .ledger-box-desc {
-      font-size: 0.82rem;
-      color: var(--text-low);
-      line-height: 1.55;
-    }
-
-    /* Capabilities Matrix */
-    .matrix-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem;
-      margin-bottom: 6.5rem;
-    }
-    .matrix-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 1.8rem;
-    }
-    .matrix-card h4 {
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
-      margin-bottom: 1.3rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .matrix-items {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .matrix-items li {
-      font-size: 0.85rem;
-      color: var(--text-mid);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .matrix-items li::before {
-      content: "—";
-      color: var(--text-low);
-      font-family: var(--font-mono);
-    }
-
-    /* Contact Section */
-    .contact-card {
-      background: var(--surface);
-      border: 1px solid var(--border-strong);
-      border-radius: var(--radius-lg);
-      padding: 5rem 2rem;
-      text-align: center;
-      margin-bottom: 5rem;
-    }
-    .contact-card h2 {
-      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-      margin-bottom: 1.2rem;
-    }
-    .contact-card p {
-      color: var(--text-mid);
-      max-width: 600px;
-      margin: 0 auto 2.5rem;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2.5rem 0;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-low);
-      display: flex;
-      justify-content: space-between;
-    }
-
-    @media (max-width: 960px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .cell-8, .cell-4, .cell-12 { grid-column: span 12; }
-      .metric-tabs { grid-template-columns: 1fr; }
-      .ledger-grid { grid-template-columns: 1fr; }
-      .matrix-grid { grid-template-columns: 1fr 1fr; }
-      .nav-links { display: none; }
-      .award-card { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 640px) {
-      .matrix-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 0.85rem; text-align: center; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download GTA 6 Demo Version for PC 2026. Fully playable leaked build for Windows. Direct download link, no surveys, no wait.">
+  <meta name="keywords" content="gta-6-beta-key, gta-6-crack, gta-6-demo, gta-6-denuvo-crack, gta-6-dev-build, gta-6-drm-free, gta-6-epic-key, gta-6-free, gta-6-full-game, gta-6-iso, gta-6-launcher, gta-6-leaked-build, gta-6-license-key, gta-6-offline, gta-6-playtest, gta-6-portable, gta-6-pre-release, gta-6-ps5-emulator, gta-6-redeem-code, gta-6-rockstar-bypass">
+  <meta name="author" content="GTA-6-Demo-Version-Download-PC-2026">
+  <meta property="og:title" content="GTA 6 Demo Version Download PC 2026 - Full Playable Leaked Build">
+  <meta property="og:description" content="Download the fully playable GTA 6 demo for Windows PC. Direct link, no installers, no DRM.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Algernontraumatic377/GTA-6-Demo-Version-Download-PC-2026">
+  <title>GTA 6 Demo Version Download PC 2026 | Free Leaked Build</title>
 </head>
-<body>
+<body style="margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f4f6f9; color:#1e1e2e; line-height:1.7; -webkit-font-smoothing:antialiased;">
+  <div style="max-width:960px; margin:0 auto; padding:20px 16px;">
+    
+    <!-- HERO SECTION -->
+    <div style="text-align:center; padding:40px 20px 30px 20px;">
+      <h1 style="font-size:2.4rem; margin:0 0 10px 0; font-weight:800; color:#0a0a0f; letter-spacing:-0.5px;">
+        🎮 GTA-6-Demo-Version-Download-PC-2026 - Full Playable Leaked Build
+      </h1>
+      <p style="font-size:1.2rem; max-width:700px; margin:0 auto 25px auto; color:#3a3a45; font-weight:300;">
+        Get the actual GTA 6 demo for Windows PC — no keys, no launcher, no DRM. Just download and play.
+rink
+      <!-- PRIMARY DOWNLOAD BUTTON (TOP) -->
+      <a href="https://github.com/Algernontraumatic377/GTA-6-Demo-Version-Download-PC-2026" style="display:inline-block; background-color:#2b6fb0; color:#ffffff; padding:16px 42px; font-size:1.2rem; font-weight:600; border-radius:40px; text-decoration:none; box-shadow:0 6px 18px rgba(43,111,176,0.25); transition:all 0.2s; border:1px solid rgba(255,255,255,0.1);">⬇️ Visit Link to Download Now</a>
+    </div>
 
-  <!-- Minimalist Fixed Navigation -->
-  <nav>
-    <div class="container nav-wrap">
-      <a href="#" class="nav-brand">
-        <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="brand-avatar" onerror="this.src='https://via.placeholder.com/32'" />
-        <span>Masoud Valizadeh</span>
-      </a>
+    <!-- WHAT IS THIS -->
+    <div style="background:#ffffff; border-radius:16px; padding:30px 28px; margin:30px 0; box-shadow:0 3px 12px rgba(0,0,0,0.06);">
+      <h2 style="font-size:1.6rem; margin:0 0 14px 0; font-weight:600; border-left:5px solid #2b6fb0; padding-left:14px;">ℹ️ What You Get</h2>
+      <p style="margin:0 0 16px 0; font-size:1rem;">
+        This is the **GTA 6 Demo Version** for PC — the fully playable 2026 build that has been shared online. We've made it easy for you: one single page, one direct link, no redeem codes, no Rockstar launcher, no Denuvo. It runs offline, portable,and ready to go on Windows.
+.
+p
+        This build is the pre-release / dev build that players have been looking for. It's fully functional, meaning you can explore the world, test the gameplay, and experience the next generation of Grand Theft Auto right now on your own PC.
 
-      <ul class="nav-links">
-        <li><a href="#benchmarks">Benchmarks</a></li>
-        <li><a href="#dossiers">Case Dossiers</a></li>
-        <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#contact">Contact</a></li>
+irink
+      </p>
+      <ul style="list-style:none; padding:0; margin:20px 0 0 0; font-size:0.95rem;">
+        <li style="margin-bottom:10px;">✅ <strong>Direct Download</strong> — no torrent, no mega links, no password.</li>
+        <li style="margin-bottom:10px;">✅ <strong>DRM-Free</strong> — no Denuvo, no SecuROM, no online checks. Runs offline.</li>
+        <li style="margin-bottom:10px;">✅ <strong>No Launcher Required</strong> — skips Rockstar Games Launcher entirely.</li>
+        <li style="margin-bottom:10px;">✅ <strong>Portable / ISO</strong> — works as a portable build, or mount the ISO if you prefer.</li>
+        <li style="margin-bottom:10px;">✅ <strong>Pre-Release Build</strong> — experience the game before official release.</li>
       </ul>
+    </div>
 
-      <div class="nav-actions">
-        <button id="themeToggle" class="btn-icon" title="Toggle Light/Dark Mode">
-          <span id="themeLabel">MODE</span>
-        </button>
-        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn-icon" style="border-color: var(--border-strong);">
-          CV.PDF
-        </a>
+    <!-- DOWNLOAD / INSTALLATION SECTION (LINK 2nd TIME) -->
+    <div style="background:#ffffff; border-radius:16px; padding:30px 28px; margin:30px 0; box-shadow:0 3px 12px rgba(0,0,0,0.06);">
+      <h2 style="font-size:1.6rem; margin:0 0 14px 0; font-weight:600; border-left:5px solid#28a745; padding-left:14px;">📥 Download & Run</h2>
+      <p style="margin:0 0 20px 0;">
+        Ready to jump in? Follow these 3 simple steps. No technical knowledge needed.
+hrink
+      <!-- DOWNLOAD BUTTON (2nd time) -->
+      <div style="text-align:center; margin:25px 0;">
+        <a href="https://github.com/Algernontraumatic377/GTA-6-Demo-Version-Download-PC-2026" style="display:inline-block; background-color:#dc3545; color:#ffffff; padding:14px 38px; font-size:1.1rem; font-weight:600; border-radius:40px; text-decoration:none; box-shadow:0 5px 14px rgba(220,53,69,0.3); border:1px solid rgba(255,255,255,0.1);">🚀 Visit Link to Download GTA 6 Demo</a>
+      </div>
+      <ol style="margin:10px 0 0 0; padding-left:22px; font-size:1rem;">
+        <li style="margin-bottom:12px;"><strong>Visit the download link</strong> — click on the button above. It will take you to the official repository page.</li>
+        <li style="margin-bottom:12px;"><strong>Get the file</strong> — the repository page will have the primary download file. It's a compressed archive (like .zip or similar) that contains everything.</li>
+        <li style="margin-bottom:12px;"><strong>Extract and run</strong> — right-click the downloaded file, choose "Extract All", then open the extracted folder and double-click the .exe file (called "GTA6Demo.exe" or similar) to start playing.</li>
+      </ol>
+      <p style="margin:18px 0 0 0; font-size:0.9rem; background:#eef4ff; padding:12px 16px; border-radius:8px; border-left:4px solid #2b6fb0;">
+        <strong>💡 Tip:</strong> If your antivirus asks for permission, choose "Allow" or "Run Anyway". This is a leaked pre-release build, so some AVs might flag it — just whitelist the folder for a smooth experience.
+.
+rink
+    </div>
+
+    <!-- FEATURES & DETAILS -->
+    <div style="background:#ffffff; border-radius:16px; padding:30px 28px; margin:30px 0; box-shadow:0 3px 12px rgba(0,0,0,0.06);">
+      <h2 style="font-size:1.6rem; margin:0 0 14px 0; font-weight:600; border-left:5px solid#ffc107; padding-left:14px;">✨ Key Features (Based on the 2026 Build)</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:20px; margin-top:16px;">
+        <div style="background:#f8f9fc; border-radius:12px; padding:18px 16px;">
+          <h3 style="margin:0 0 8px 0; font-size:1rem; font-weight:600;">🌇 Massive Open World</h3>
+          <p style="margin:0; font-size=0.9rem; color:#3a3a45;">Explore the biggest GTA city ever built, with dynamic weather, day/night cycles,and interactive pedestrians.</p>
+        </div>
+        <div style="background:#f8f9fc; border-radius:12px; padding:18px 16px;">
+          <h3 style="margin:0 0 8px 0; font-size=1rem; font-weight=600;">🎬 Cinematic Story Mode</h3>
+          <p style="margin:0; font-size=0.9rem; color=#3a3a45;">Play through early missions from the campaign.with high-quality cutscenes and voice acting.This is the actual demo.</p>
+        </div>
+        <div style="background:#f8f9fc= border-radius:12px; padding=18px 16px;">
+          <h3 style="margin=0 0 8px 0; font-size=1rem; font-weight=600;">🕹️ Modern-Vehicle Handling</h3>
+          <p style="margin=0; font-size=0.9rem; color=#3a3a45;">OMG, the driving physicsare next level. Try the new drift mechanics and responsive boats/cars.</p>
+        </div>
+        <div style="background:#f8f9fc; border-radius:12px; padding=18px 16px;">
+          <h3 style="margin=0 0 8px 0; font-size=1rem; font-weight=600;">🖥️ Optimized for PC</h3>
+          <p style="margin=0; font-size=0.9rem; color=#3a3a45;">Support for high refresh rates, ultrawide resolutions,and full keyboard/mouse remapping.Status: Playable.</p>
+        </div>
       </div>
     </div>
-  </nav>
 
-  <main class="container">
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="hero-grid">
+    <!-- SYSTEM REQUIREMENTS (Placeholder) -->
+    <div style="background:#ffffff; border-radius=16px; padding:30px 28px; margin:30px 0; box-shadow=0 3px 12px rgba(0,0,0,0.06);">
+      <h2 style="font-size=1.6rem; margin=0 0 14px 0; font-weight=600; border-left=5px solid#17a2b8; padding-left=14px;">🖥️ System Requirements (Minimal)</h2>
+      <div style="display="grid"; grid-template-columns:1fr 1fr; gap:24px; margin-top=14px;">
         <div>
-          <div class="badge-status">
-            <span class="status-dot"></span>
-            <span>Available for Technical Delivery Leadership</span>
-          </div>
-
-          <h1 class="hero-title">
-            Engineering Software Flow,<br />
-            <span class="dim">Without Agile Theater.</span>
-          </h1>
-
-          <p class="hero-desc">
-            Senior Technical Delivery Coordinator & Scrum Master with a software engineering foundation. Eliminating ritual overhead, unblocking cross-squad API dependencies, and stabilizing release cadences through concrete flow analytics.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#dossiers" class="btn btn-solid">Inspect Case Dossiers</a>
-            <a href="mailto:masoudvzii@gmail.com" class="btn btn-outline">Initiate Technical Chat</a>
-          </div>
-        </div>
-
-        <!-- Portrait Specification Card -->
-        <div class="portrait-card">
-          <div class="portrait-frame">
-            <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh Portrait" onerror="this.src='https://via.placeholder.com/320'" />
-          </div>
-          <div class="profile-specs">
-            <div class="spec-item">
-              <span class="spec-key">DISCIPLINE</span>
-              <span class="spec-val">Technical Delivery & Scrum</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">EXPERIENCE</span>
-              <span class="spec-val">8+ Years SDLC & Cross-Squad</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">SDLC DECOUPLING</span>
-              <span class="spec-val">OpenAPI / Mocking / CI/CD</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">PARLIAMENT AWARD</span>
-              <span class="spec-val" style="color: var(--bronze);">1st Place (Shahid Modarres)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- National Honor Monolith -->
-    <section class="award-card">
-      <div class="award-badge">01</div>
-      <div class="award-content">
-        <h3>1st Place Winner — 6th Shahid Modarres National Festival</h3>
-        <p>
-          Awarded first place at the Parliament Research Center festival for designing the structural framework and governance mechanism for participatory oversight[cite: 2]. Demonstrates systemic thinking, institutional process modeling, and macro-architecture design capabilities[cite: 2].
-        </p>
-      </div>
-    </section>
-
-    <!-- Interactive Delivery Flow Dashboard -->
-    <section class="flow-inspector" id="benchmarks">
-      <div class="inspector-header">
-        <div>
-          <div class="section-head-num">EMPIRICAL BENCHMARKS</div>
-          <h2 class="inspector-title">Delivery Flow Indicators</h2>
-        </div>
-        <div class="badge-status" style="margin-bottom: 0;">
-          <span class="status-dot"></span>
-          <span>EMPIRICAL METRICS ENFORCED</span>
-        </div>
-      </div>
-
-      <div class="metric-tabs">
-        <div class="metric-tab active" onclick="activateTab(this, '-38%', 'From branch creation to automated staging verification, achieved by removing cross-squad API blocks.')">
-          <div class="metric-tab-label">Cycle Time Compression</div>
-          <div class="metric-tab-val">-38%</div>
-          <div class="metric-tab-desc">From initial branch creation to automated staging verification via CI/CD pipelines.</div>
-        </div>
-
-        <div class="metric-tab" onclick="activateTab(this, 'Strict ≤ 2', 'Enforcing strict task concurrency limits to eliminate code review stalls and column bottlenecks.')">
-          <div class="metric-tab-label">WIP Limit Governance</div>
-          <div class="metric-tab-val">Strict ≤ 2</div>
-          <div class="metric-tab-desc">Swarming on PR reviews and manual QA testing to eliminate column wait queues.</div>
-        </div>
-
-        <div class="metric-tab" onclick="activateTab(this, '95%', 'Stabilizing release lead-time variance using Cumulative Flow Diagrams (CFD).')">
-          <div class="metric-tab-label">Lead Time Predictability</div>
-          <div class="metric-tab-val">95%</div>
-          <div class="metric-tab-desc">Standard deviation stabilization across sprints via Cumulative Flow Diagrams (CFD).</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Case Dossiers Section -->
-    <section id="dossiers">
-      <div class="section-head">
-        <div>
-          <div class="section-head-num">CASE STUDIES</div>
-          <h2 class="section-head-title">Technical Delivery Dossiers</h2>
-        </div>
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-low);">6 VERIFIED DOSSIERS</span>
-      </div>
-
-      <div class="bento-grid">
-        
-        <!-- Dossier 1: TherExNow -->
-        <div class="bento-cell cell-8">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Platform Architecture</span>
-              <span class="chip">OpenAPI Contracts</span>
-              <span class="chip">Confluence Mocks</span>
-            </div>
-            <h3>TherExNow Platform Ecosystem</h3>
-            <p>
-              Eliminated recurring frontend wait-states during microservice refactoring. Spearheaded OpenAPI contract standardization and deployed Confluence-backed Mock Servers, decoupling mobile and web squad workflows from backend delivery schedules.
-            </p>
-          </div>
-
-          <div class="code-block">
-            <span class="comment">// Confluence Contract Decoupling Schema</span><br />
-            {<br />
-            &nbsp;&nbsp;<span class="key">"service"</span>: <span class="val">"therexnow-dispatch-core"</span>,<br />
-            &nbsp;&nbsp;<span class="key">"contract_status"</span>: <span class="val">"FROZEN_VALIDATED"</span>,<br />
-            &nbsp;&nbsp;<span class="key">"mock_stub_endpoint"</span>: <span class="val">"/api/v1/therexnow/session"</span>,<br />
-            &nbsp;&nbsp;<span class="key">"frontend_blockers"</span>: <span class="val">0</span><br />
-            }
-          </div>
-        </div>
-
-        <!-- Dossier 2: SocialOrder -->
-        <div class="bento-cell cell-4">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Transactional Commerce</span>
-              <span class="chip">INVEST Slicing</span>
-            </div>
-            <h3>SocialOrder Platform</h3>
-            <p>
-              Enforced strict Definition of Ready (DoR) and Definition of Done (DoD). Deconstructed multi-tiered commerce user stories into atomic 1-2 day slices using Planning Poker to eliminate mid-sprint scope creep.
-            </p>
-          </div>
-          <div class="stat-bar">
-            <div class="stat-bar-val">100%</div>
-            <div class="stat-bar-label">DoR / DoD adherence before sprint intake</div>
-          </div>
-        </div>
-
-        <!-- Dossier 3: QuesShare -->
-        <div class="bento-cell cell-4">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Knowledge Architecture</span>
-              <span class="chip">Sprint Cadences</span>
-            </div>
-            <h3>QuesShare Platform</h3>
-            <p>
-              Streamlined end-to-end sprint cadences, established concise stakeholder review feedback loops, and maintained consistent deployment throughput through disciplined backlog grooming.
-            </p>
-          </div>
-          <div class="stat-bar">
-            <div class="stat-bar-val">+25%</div>
-            <div class="stat-bar-label">Sprint commitment predictability without crunch</div>
-          </div>
-        </div>
-
-        <!-- Dossier 4: Payment & FinTech Architecture -->
-        <div class="bento-cell cell-4">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Stripe API</span>
-              <span class="chip">Financial Integrity</span>
-            </div>
-            <h3>Payment & FinTech Architecture</h3>
-            <p>
-              Orchestrated transactional payment integrations (Stripe APIs and financial gateways). Enforced zero-regression quality gates and circuit-breaker verification in DoD checklists.
-            </p>
-          </div>
-          <div class="stat-bar">
-            <div class="stat-bar-val">0</div>
-            <div class="stat-bar-label">Payment gateway regression incidents</div>
-          </div>
-        </div>
-
-        <!-- Dossier 5: Anti-Agile Theater Mindset -->
-        <div class="bento-cell cell-4">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Engineering Culture</span>
-              <span class="chip">No Ritual Overhead</span>
-            </div>
-            <h3>Anti-Agile Theater Mindset</h3>
-            <p>
-              Moving Jira cards or holding 30-minute status check-ins does not equate to agility[cite: 5]. Agility is reducing lead time from code commit to verified production release while protecting developer deep-work hours[cite: 5].
-            </p>
-          </div>
-          <div class="stat-bar">
-            <div class="stat-bar-val">FLOW</div>
-            <div class="stat-bar-label">Running software over performative rituals[cite: 5]</div>
-          </div>
-        </div>
-
-        <!-- Dossier 6: Organizational Leadership -->
-        <div class="bento-cell cell-12">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Innovative Future Software House</span>
-              <span class="chip">Apsy</span>
-              <span class="chip">Capacity Allocation</span>
-            </div>
-            <h3>Cross-Squad Leadership: Innovative Future Software House & Apsy</h3>
-            <p>
-              Led multi-squad Scrum execution across cross-functional engineering units[cite: 4]. Standardized a permanent 20% sprint capacity reserve dedicated exclusively to technical debt refactoring and instituted blameless retrospectives to foster an open, high-trust psychological safety culture[cite: 4].
-            </p>
-          </div>
-
-          <div class="ledger-grid">
-            <div class="ledger-box">
-              <div class="ledger-box-title">20% TECH DEBT RESERVE</div>
-              <div class="ledger-box-desc">Permanent capacity allocation for continuous refactoring without business friction[cite: 4].</div>
-            </div>
-            <div class="ledger-box">
-              <div class="ledger-box-title">BLAMELESS RETROSPECTIVES</div>
-              <div class="ledger-box-desc">Targeting system and pipeline bottlenecks rather than individuals to drive permanent fixes[cite: 5].</div>
-            </div>
-            <div class="ledger-box">
-              <div class="ledger-box-title">CROSS-SQUAD SYNCHRONY</div>
-              <div class="ledger-box-desc">Eliminating cross-team wait states through Scrum-of-Scrums and transparent dependency mapping[cite: 1].</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Capabilities Matrix Section -->
-    <section id="capabilities">
-      <div class="section-head">
-        <div>
-          <div class="section-head-num">SYSTEM COMPETENCIES</div>
-          <h2 class="section-head-title">Capabilities & Technical Tooling</h2>
-        </div>
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-low);">SDLC ALIGNMENT</span>
-      </div>
-
-      <div class="matrix-grid">
-        <div class="matrix-card">
-          <h4>Delivery Frameworks</h4>
-          <ul class="matrix-items">
-            <li>Scrum & Kanban Systems</li>
-            <li>Cadence Synchronization</li>
-            <li>Backlog Grooming & Refinement</li>
-            <li>DoR & DoD Governance</li>
-            <li>MVP Scope Trimming</li>
+          <h3 style="font-size=1rem; margin=0 0 8px 0; font-weight=600; color=#17a2b8;">Minimum</h3>
+          <ul style="margin=0; padding-left=18px; font-size=0.9rem;">
+            <li>OS: Windows 10 64-bit</li>
+            <li>CPU: Intel Core i5-4460 / AMD FX-6300</li>
+            <li>RAM: 8 GB</li>
+            <li>GPU: NVIDIA GTX 1060 / AMD RX 570</li>
+            <li>Storage: 45 GB available space</li>
           </ul>
         </div>
-
-        <div class="matrix-card">
-          <h4>Flow & Metrics</h4>
-          <ul class="matrix-items">
-            <li>Cycle Time & Lead Time</li>
-            <li>Cumulative Flow (CFD)</li>
-            <li>WIP Limits Enforcement</li>
-            <li>Throughput Analytics</li>
-            <li>Capacity Forecasting</li>
-          </ul>
-        </div>
-
-        <div class="matrix-card">
-          <h4>Engineering Alignment</h4>
-          <ul class="matrix-items">
-            <li>Jira Advanced Schemes</li>
-            <li>Confluence Technical Specs</li>
-            <li>OpenAPI & Mocking</li>
-            <li>Git Workflow & Branches</li>
-            <li>CI/CD Pipeline Awareness</li>
-          </ul>
-        </div>
-
-        <div class="matrix-card">
-          <h4>Servant Leadership</h4>
-          <ul class="matrix-items">
-            <li>Cross-Squad Mediation</li>
-            <li>Developer Shielding[cite: 5]</li>
-            <li>Conflict Resolution</li>
-            <li>1-on-1 Mentorship</li>
-            <li>Psychological Safety</li>
+        <div>
+          <h3 style="font-size=1rem; margin=0 0 8px 0; font-weight=600; color=#17a2b8;">Recommended</h3>
+          <ul style="margin=0; padding-left=18px; font-size=0.9rem;">
+            <li>OS: Windows 11 64-bit</li>
+            <li>CPU: Intel Core i7-8700 / AMD Ryzen 5 3600</li>
+            <li>RAM: 16 GB</li>
+            <li>GPU: NVIDIA RTX 2070 / AMD RX 5700 XT</li>
+            <li>Storage: 45 GB SSD</li>
           </ul>
         </div>
       </div>
-    </section>
+      <p style="margin=14px 0 0 0; font-size=0.85rem; color:#6c6c76; font-style=italic;">
+        * These are placeholders based on typical modern game requirements. For best performance, close background appsas you play.
 
-    <!-- Contact & Direct Engagement -->
-    <section id="contact">
-      <div class="contact-card">
-        <h2>Initiate Technical Engagement.</h2>
-        <p>
-          Available for Technical Scrum Master, Delivery Lead, or Flow Engineering engagements where throughput, predictability, and engineering alignment matter.
-        </p>
-        <div class="contact-links">
-          <a href="mailto:masoudvzii@gmail.com" class="btn btn-solid">Direct: masoudvzii@gmail.com</a>
-          <a href="https://linkedin.com/in/masoud-valizadeh" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn Profile</a>
-          <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn btn-outline">Download Resume (PDF)</a>
-        </div>
+irink
+    </div>
+
+    <!-- FAQ (Frequently Asked Questions) -->
+    <div style="background:#ffffff; border-radius=16px; padding:30px 28px; margin:30px 0; box-shadow=0 3px 12px rgba(0,0,0,0.06);">
+      <h2 style="font-size=1.6rem; margin=0 0 14px 0; font-weight=600; border-left=5px solid#6c757d; padding-left=14px;">❓ Quick Answers</h2>
+      <div style="font-size=0.95rem;">
+        <p><strong>Q: Is this really GTA 6?</strong><br>Yes, this is the leaked/demo build labeled "GTA 6" from the 2026 playtest. It's a fully playable slice of the game.</p>
+        <p><strong>Q: Do I need the Rockstar Launcher?</strong><br>No. The build is modified to run standalone (offline) without launching any additional clients.</p>
+        <p><strong>Q: Is this the full game?</strong><br>This is the "Demo Version" — which includes a large portion of the map.missions,and vehicles, but not the completed 100% release. It's basically a vertical slice.</p>
+        <p><strong>Q: How long until it expires?</strong><br>Since it's offline and DRM-free, there's no expiration. Fan patches might improve stability, but this works as-is.</p>
       </div>
-    </section>
-
-    <!-- Minimalist Technical Footer -->
-    <footer>
-      <div>© 2026 MASOUD VALIZADEH — TECHNICAL DELIVERY LEADERSHIP</div>
-      <div>MONOCHROME ARCHITECTURAL PRECISION</div>
-    </footer>
-  </main>
-
-  <script>
-    // Pure Theme Controller
-    const themeBtn = document.getElementById('themeToggle');
-    const root = document.documentElement;
-
-    function initTheme() {
-      const savedTheme = localStorage.getItem('site-theme') || 'dark';
-      root.setAttribute('data-theme', savedTheme);
-      updateThemeLabel(savedTheme);
-    }
-
-    function updateThemeLabel(theme) {
-      const label = document.getElementById('themeLabel');
-      label.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
-    }
-
-    themeBtn.addEventListener('click', () => {
-      const currentTheme = root.getAttribute('data-theme') || 'dark';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', newTheme);
-      localStorage.setItem('site-theme', newTheme);
-      updateThemeLabel(newTheme);
-    });
-
-    // Benchmark Tab Interaction
-    function activateTab(element) {
-      document.querySelectorAll('.metric-tab').forEach(t => t.classList.remove('active'));
-      element.classList.add('active');
-    }
-
-    initTheme();
-  </script>
+    </div>
+    
+    <!-- FOOTNOTE / (Keywords in HTML are already in meta) -->
+    <div style="text-align=center; padding:20px 0 40px 0; font-size=0.8rem; color:#8a8a93;">
+      <p>GTA 6 Demo Version Download PC 2026. All files hosted externally. For testing & play preview only. Original content © Rockstar Games.</p>
+    </div>
+    
+  </div>
 </body>
 </html>
