@@ -3,241 +3,238 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Masoud Valizadeh | Technical Delivery Lead & Scrum Master</title>
-  <meta name="description" content="Official Portfolio of Masoud Valizadeh. Software Engineering background, Flow Metrics, Anti-Agile Theater, and End-to-End Delivery Architecture." />
+  <title>Masoud Valizadeh — Technical Delivery & Flow Architecture</title>
+  <meta name="description" content="Portfolio of Masoud Valizadeh. Technical Scrum Master, Flow Metrics, and Engineering Delivery Architecture." />
 
-  <!-- فونت‌های استاندارد بین‌المللی و فارسی -->
+  <!-- فونت‌های مونوکروم و ادیتوریال استاندارد -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-base: #060b17;
-      --bg-surface: rgba(14, 23, 42, 0.78);
-      --bg-surface-hover: rgba(23, 37, 68, 0.88);
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-strong: rgba(59, 130, 246, 0.35);
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --primary-glow: rgba(37, 99, 235, 0.22);
-      --teal-precision: #0ea5e9;
-      --emerald-live: #10b981;
-      --gold-honor: #d97706;
-      --gold-surface: rgba(217, 119, 6, 0.08);
-      --text-high: #f8fafc;
-      --text-med: #94a3b8;
-      --text-low: #64748b;
-      --font-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
-      --font-code: 'JetBrains Mono', monospace;
-      --card-radius: 18px;
+      /* پالت مونوکروم استودیوهای Awwwards — بدون آبی و بنفش */
+      --bg: #070708;
+      --bg-subtle: #0f0f11;
+      --surface: #141416;
+      --surface-hover: #1a1a1d;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.22);
+      --text-high: #f4f4f5;
+      --text-mid: #a1a1aa;
+      --text-low: #52525b;
+      --accent: #ffffff;
+      --accent-invert: #000000;
+      --award-gold: #c5a880;
+      --award-surface: rgba(197, 168, 128, 0.05);
+      --award-border: rgba(197, 168, 128, 0.25);
+      --font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
       --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     [data-theme="light"] {
-      --bg-base: #f4f6fa;
-      --bg-surface: rgba(255, 255, 255, 0.92);
-      --bg-surface-hover: rgba(241, 245, 249, 1);
-      --border-subtle: rgba(15, 23, 42, 0.08);
-      --border-strong: rgba(37, 99, 235, 0.4);
-      --primary: #1d4ed8;
-      --primary-hover: #1e40af;
-      --primary-glow: rgba(29, 78, 216, 0.12);
-      --teal-precision: #0284c7;
-      --emerald-live: #059669;
-      --gold-honor: #b45309;
-      --gold-surface: rgba(180, 83, 9, 0.06);
-      --text-high: #0b1329;
-      --text-med: #475569;
-      --text-low: #94a3b8;
+      --bg: #f6f6f4;
+      --bg-subtle: #ecece9;
+      --surface: #ffffff;
+      --surface-hover: #f0f0ed;
+      --border: rgba(0, 0, 0, 0.08);
+      --border-strong: rgba(0, 0, 0, 0.25);
+      --text-high: #121214;
+      --text-mid: #52525b;
+      --text-low: #a1a1aa;
+      --accent: #121214;
+      --accent-invert: #ffffff;
+      --award-gold: #8c6d46;
+      --award-surface: rgba(140, 109, 70, 0.06);
+      --award-border: rgba(140, 109, 70, 0.25);
     }
 
     html[dir="rtl"] {
-      --font-ui: 'Vazirmatn', system-ui, sans-serif;
+      --font-display: 'Vazirmatn', -apple-system, sans-serif;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: var(--font-ui);
+      font-family: var(--font-display);
     }
 
     body {
-      background-color: var(--bg-base);
+      background-color: var(--bg);
       color: var(--text-high);
       line-height: 1.6;
       overflow-x: hidden;
-      background-image: 
-        radial-gradient(ellipse 70% 40% at 50% -10%, rgba(37, 99, 235, 0.14), transparent),
-        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-      background-size: 100% 100%, 48px 48px, 48px 48px;
-      background-attachment: fixed;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* بافت دانه‌ای فیلم (Grain Overlay) ویژه Awwwards */
+    .film-grain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
     .container {
-      max-width: 1240px;
+      max-width: 1320px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 2rem;
     }
 
-    /* نوبار شناور مدرن */
+    /* هدر ناوبری ادیتوریال */
     nav {
       position: fixed;
-      top: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: calc(100% - 3rem);
-      max-width: 1160px;
-      background: rgba(11, 19, 38, 0.85);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid var(--border-subtle);
-      border-radius: 999px;
-      padding: 0.65rem 1.4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(7, 7, 8, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
       z-index: 1000;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
       transition: var(--transition);
     }
     [data-theme="light"] nav {
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      background: rgba(246, 246, 244, 0.85);
     }
-
-    .nav-identity {
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .nav-brand {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       text-decoration: none;
       color: var(--text-high);
       font-weight: 800;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       letter-spacing: -0.02em;
     }
-    .avatar-mini {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--primary);
-    }
-
-    .nav-items {
+    .brand-symbol {
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--border-strong);
       display: flex;
-      gap: 1.6rem;
-      list-style: none;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
     }
-    .nav-items a {
-      color: var(--text-med);
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+    }
+    .nav-menu a {
+      color: var(--text-mid);
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
       transition: var(--transition);
     }
-    .nav-items a:hover {
+    .nav-menu a:hover {
       color: var(--text-high);
     }
-
     .nav-tools {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.6rem;
     }
-    .action-btn {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
+    .tool-btn {
+      background: transparent;
+      border: 1px solid var(--border);
       color: var(--text-high);
       padding: 0.45rem 0.85rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 700;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.4rem;
       transition: var(--transition);
     }
-    .action-btn:hover {
+    .tool-btn:hover {
       border-color: var(--border-strong);
-      background: var(--bg-surface-hover);
+      background: var(--surface);
     }
 
-    /* هیرو */
+    /* بخش Hero */
     .hero {
-      padding: 160px 0 70px;
+      padding: 160px 0 90px;
+      border-bottom: 1px solid var(--border);
     }
-    .hero-layout {
-      display: grid;
-      grid-template-columns: 1.25fr 0.85fr;
-      gap: 3.5rem;
+    .hero-meta {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+      margin-bottom: 3rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-low);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
-
-    .live-status-pill {
+    .status-live {
       display: inline-flex;
       align-items: center;
-      gap: 0.55rem;
-      background: rgba(16, 185, 129, 0.08);
-      border: 1px solid rgba(16, 185, 129, 0.25);
-      color: var(--emerald-live);
-      padding: 0.35rem 0.95rem;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
+      gap: 0.5rem;
+      color: var(--text-high);
     }
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--emerald-live);
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--text-high);
       border-radius: 50%;
-      box-shadow: 0 0 10px var(--emerald-live);
-      animation: ripple 2s infinite ease-in-out;
-    }
-    @keyframes ripple {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.5; }
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 4rem;
+      align-items: flex-end;
+    }
     .hero-title {
-      font-size: clamp(2.4rem, 4.8vw, 3.8rem);
-      font-weight: 850;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
-    }
-    .gradient-heading {
-      background: linear-gradient(135deg, #ffffff 40%, var(--teal-precision) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    [data-theme="light"] .gradient-heading {
-      background: linear-gradient(135deg, #070c18 40%, var(--primary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-summary {
-      color: var(--text-med);
-      font-size: 1.08rem;
-      line-height: 1.75;
+      font-size: clamp(3rem, 6.2vw, 5.8rem);
+      font-weight: 900;
+      line-height: 0.96;
+      letter-spacing: -0.04em;
       margin-bottom: 2rem;
-      max-width: 630px;
+      text-transform: uppercase;
     }
-
-    .hero-cta-group {
+    .hero-title span.dimmed {
+      color: var(--text-low);
+      font-weight: 300;
+    }
+    .hero-lead {
+      color: var(--text-mid);
+      font-size: 1.15rem;
+      line-height: 1.75;
+      max-width: 640px;
+      margin-bottom: 2.8rem;
+    }
+    .hero-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
+
+    /* دکمه‌های تمیز مونوکروم */
     .btn {
-      padding: 0.85rem 1.8rem;
-      border-radius: 12px;
-      font-size: 0.92rem;
+      padding: 0.9rem 2rem;
+      font-size: 0.85rem;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
@@ -245,339 +242,294 @@
       gap: 0.6rem;
       transition: var(--transition);
       cursor: pointer;
+      letter-spacing: -0.01em;
     }
     .btn-solid {
-      background: var(--primary);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 10px 25px var(--primary-glow);
+      background: var(--accent);
+      color: var(--accent-invert);
+      border: 1px solid var(--accent);
     }
     .btn-solid:hover {
-      background: var(--primary-hover);
+      opacity: 0.85;
       transform: translateY(-2px);
     }
-    .btn-outline {
-      background: var(--bg-surface);
+    .btn-line {
+      background: transparent;
       color: var(--text-high);
-      border: 1px solid var(--border-subtle);
+      border: 1px solid var(--border-strong);
     }
-    .btn-outline:hover {
-      background: var(--bg-surface-hover);
-      border-color: var(--border-strong);
+    .btn-line:hover {
+      background: var(--surface);
+      border-color: var(--text-high);
       transform: translateY(-2px);
     }
 
-    /* کارت هویت اجرایی */
-    .executive-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--card-radius);
-      padding: 2.2rem;
-      position: relative;
-      box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(14px);
-    }
-    .executive-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--teal-precision), transparent);
-    }
-
-    .exec-profile-row {
+    /* پرتره استودیویی و ایندکس مشخصات */
+    .hero-portrait-card {
       display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      margin-bottom: 2rem;
+      flex-direction: column;
+      gap: 1.5rem;
     }
-    .exec-portrait-frame {
-      position: relative;
-      width: 90px;
-      height: 90px;
-      flex-shrink: 0;
-    }
-    .exec-portrait-img {
+    .portrait-box {
       width: 100%;
-      height: 100%;
-      border-radius: 20px;
-      object-fit: cover;
-      border: 2px solid var(--border-strong);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-    .exec-verify-badge {
-      position: absolute;
-      bottom: -4px;
-      right: -4px;
-      background: var(--emerald-live);
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 3px solid var(--bg-base);
-    }
-    .exec-meta h3 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-    .exec-meta p {
-      color: var(--text-med);
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    /* شبیه‌ساز مهندسی جریان (Flow Monitor) */
-    .flow-monitor {
-      background: rgba(7, 12, 24, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: 14px;
-      padding: 1.25rem;
-    }
-    .flow-monitor-title {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-low);
-      margin-bottom: 1rem;
-      display: flex;
-      justify-content: space-between;
-    }
-    .flow-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-    .flow-bar-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-    .flow-label-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-    .bar-track {
-      background: rgba(255, 255, 255, 0.05);
-      height: 7px;
-      border-radius: 99px;
+      aspect-ratio: 1 / 1;
+      max-width: 320px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      position: relative;
       overflow: hidden;
     }
-    .bar-fill {
+    .portrait-img {
+      width: 100%;
       height: 100%;
-      border-radius: 99px;
-      background: linear-gradient(90deg, var(--primary), var(--teal-precision));
+      object-fit: cover;
+      filter: grayscale(100%) contrast(110%);
+      transition: var(--transition);
     }
-
-    /* بنر جایزه ملی شهید مدرس */
-    .award-card {
-      background: linear-gradient(135deg, var(--gold-surface) 0%, var(--bg-surface) 100%);
-      border: 1px solid rgba(217, 119, 6, 0.35);
-      border-radius: var(--card-radius);
-      padding: 1.8rem 2.2rem;
-      margin: 2rem 0 5rem;
+    .portrait-box:hover .portrait-img {
+      filter: grayscale(0%);
+    }
+    .system-manifest {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+    .manifest-row {
       display: flex;
-      align-items: center;
-      gap: 2rem;
-      backdrop-filter: blur(14px);
+      justify-content: space-between;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--border);
     }
-    .award-seal {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-      background: rgba(217, 119, 6, 0.15);
-      border: 1px solid rgba(217, 119, 6, 0.4);
-      color: var(--gold-honor);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      flex-shrink: 0;
+    .manifest-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
-    .award-copy h3 {
-      color: var(--gold-honor);
-      font-size: 1.25rem;
-      font-weight: 800;
-      margin-bottom: 0.35rem;
-    }
-    .award-copy p {
-      color: var(--text-med);
-      font-size: 0.94rem;
-      line-height: 1.6;
-    }
+    .manifest-k { color: var(--text-low); }
+    .manifest-v { color: var(--text-high); font-weight: 700; }
 
-    /* سکشن بنتو گرید پروژه‌ها */
-    .section-headline {
-      margin-bottom: 2.5rem;
+    /* نوار تیکر متحرک (Marquee Ribbon) */
+    .ticker-ribbon {
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+      background: var(--bg-subtle);
     }
-    .section-tagline {
-      font-size: 0.78rem;
-      font-weight: 800;
+    .ticker-track {
+      display: inline-flex;
+      gap: 3rem;
+      animation: tickerLoop 30s linear infinite;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--teal-precision);
-      margin-bottom: 0.4rem;
+      letter-spacing: 0.1em;
+      color: var(--text-mid);
     }
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 850;
+    @keyframes tickerLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* افتخار ملی: جشنواره شهید مدرس */
+    .monument-award {
+      margin: 6rem 0 3rem;
+      background: var(--award-surface);
+      border: 1px solid var(--award-border);
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .award-num {
+      font-family: var(--font-mono);
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--award-gold);
+      line-height: 1;
+    }
+    .award-body h3 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text-high);
+      margin-bottom: 0.6rem;
       letter-spacing: -0.02em;
     }
+    .award-body p {
+      color: var(--text-mid);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
 
-    .bento-grid {
+    /* هدر سکشن‌ها */
+    .section-bar {
+      padding: 6rem 0 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3.5rem;
+    }
+    .section-index {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-low);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+    .section-name {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    /* ساختار پرونده پروژه‌ها (Engineering Ledger) */
+    .ledger-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 1.5rem;
       margin-bottom: 6rem;
     }
-    .bento-cell {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--card-radius);
-      padding: 2.2rem;
+    .ledger-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.4rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      backdrop-filter: blur(12px);
       transition: var(--transition);
       position: relative;
     }
-    .bento-cell:hover {
+    .ledger-card:hover {
       border-color: var(--border-strong);
-      transform: translateY(-4px);
+      background: var(--surface-hover);
     }
-    .cell-8 { grid-column: span 8; }
-    .cell-4 { grid-column: span 4; }
-    .cell-6 { grid-column: span 6; }
-    .cell-12 { grid-column: span 12; }
+    .col-8 { grid-column: span 8; }
+    .col-4 { grid-column: span 4; }
+    .col-6 { grid-column: span 6; }
+    .col-12 { grid-column: span 12; }
 
-    .tag-container {
-      display: flex;
-      gap: 0.45rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.2rem;
-    }
-    .chip {
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.25rem 0.7rem;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-med);
-    }
-    .bento-cell h3 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin-bottom: 0.75rem;
-      color: var(--text-high);
-    }
-    .bento-cell p {
-      color: var(--text-med);
-      font-size: 0.94rem;
-      line-height: 1.65;
-      margin-bottom: 1.4rem;
-    }
-
-    /* کنسول قرارداد API */
-    .code-console {
-      background: #040812;
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      overflow: hidden;
-      font-family: var(--font-code);
-      font-size: 0.78rem;
-    }
-    .console-header {
-      background: rgba(255, 255, 255, 0.03);
-      padding: 0.45rem 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .c-dot { width: 8px; height: 8px; border-radius: 50%; }
-    .c-red { background: #ef4444; }
-    .c-yellow { background: #f59e0b; }
-    .c-green { background: #10b981; }
-    .console-content {
-      padding: 1rem;
-      color: #cbd5e1;
-      line-height: 1.6;
-    }
-    .c-cyan { color: var(--teal-precision); }
-    .c-green-text { color: #34d399; }
-    .c-dim { color: #64748b; }
-
-    /* ماتریس مهارت‌ها */
-    .skills-matrix {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 6rem;
-    }
-    .skill-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: 14px;
-      padding: 1.8rem;
-      backdrop-filter: blur(10px);
-    }
-    .skill-card h4 {
-      font-size: 1.05rem;
-      font-weight: 750;
-      color: var(--text-high);
-      margin-bottom: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .skill-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .skill-badge {
-      font-size: 0.82rem;
-      padding: 0.35rem 0.8rem;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-med);
-      transition: var(--transition);
-    }
-    .skill-badge:hover {
-      border-color: var(--primary);
-      color: var(--text-high);
-      background: var(--bg-surface-hover);
-    }
-
-    /* بنر تعاملی ارتباط و استخدام */
-    .cta-container {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.12) 0%, var(--bg-surface) 100%);
-      border: 1px solid var(--border-strong);
-      border-radius: var(--card-radius);
-      padding: 4rem 2rem;
-      text-align: center;
-      margin-bottom: 5rem;
-      backdrop-filter: blur(16px);
-    }
-    .cta-container h2 {
-      font-size: 2.3rem;
-      font-weight: 850;
+    .entry-meta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--text-low);
+      letter-spacing: 0.08em;
       margin-bottom: 1rem;
+      display: block;
+    }
+    .ledger-card h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
       letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
     }
-    .cta-container p {
-      color: var(--text-med);
-      max-width: 620px;
-      margin: 0 auto 2.2rem;
+    .ledger-card p {
+      color: var(--text-mid);
+      font-size: 0.94rem;
+      line-height: 1.7;
+    }
+
+    /* ترمینال مونوکروم و خام */
+    .code-manifest {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-mid);
+      margin-top: 1.8rem;
+      line-height: 1.5;
+    }
+    .code-manifest .light { color: var(--text-high); font-weight: 700; }
+    .code-manifest .dim { color: var(--text-low); }
+
+    .kpi-block {
+      margin-top: 1.8rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .kpi-metric {
+      font-family: var(--font-mono);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-high);
+      line-height: 1;
+    }
+    .kpi-caption {
+      font-size: 0.82rem;
+      color: var(--text-low);
+      font-weight: 500;
+    }
+
+    /* ماتریس مهارت‌ها و قابلیت‌ها */
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 8rem;
+    }
+    .cap-column {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.2rem;
+    }
+    .cap-column h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .cap-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .cap-list li {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .cap-list li::before {
+      content: "/";
+      color: var(--text-low);
+      font-family: var(--font-mono);
+    }
+
+    /* تماس و استعلام تعهدات */
+    .inquiry-monolith {
+      border-top: 1px solid var(--border);
+      padding: 8rem 0 6rem;
+      text-align: center;
+    }
+    .inquiry-monolith h2 {
+      font-size: clamp(2.6rem, 5vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .inquiry-monolith p {
+      color: var(--text-mid);
+      max-width: 580px;
+      margin: 0 auto 2.8rem;
       font-size: 1.05rem;
+      line-height: 1.7;
     }
-    .cta-actions {
+    .inquiry-buttons {
       display: flex;
       justify-content: center;
       gap: 1rem;
@@ -585,495 +537,474 @@
     }
 
     footer {
-      border-top: 1px solid var(--border-subtle);
+      border-top: 1px solid var(--border);
       padding: 2.5rem 0;
-      text-align: center;
+      font-size: 0.8rem;
       color: var(--text-low);
-      font-size: 0.88rem;
+      font-family: var(--font-mono);
+      display: flex;
+      justify-content: space-between;
     }
 
     @media (max-width: 960px) {
-      .hero-layout { grid-template-columns: 1fr; }
-      .cell-8, .cell-4, .cell-6, .cell-12 { grid-column: span 12; }
-      .nav-items { display: none; }
-      .award-card { flex-direction: column; text-align: center; }
-      .exec-profile-row { flex-direction: column; text-align: center; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .col-8, .col-4, .col-6, .col-12 { grid-column: span 12; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .nav-menu { display: none; }
+      .monument-award { grid-template-columns: 1fr; gap: 1rem; }
+    }
+    @media (max-width: 640px) {
+      .capabilities-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- نوبار شناور کپسولی -->
+  <div class="film-grain"></div>
+
+  <!-- هدر ناوبری ادیتوریال -->
   <nav>
-    <a href="#" class="nav-identity">
-      <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="avatar-mini" onerror="this.src='https://via.placeholder.com/36'" />
-      <span id="navName">Masoud Valizadeh</span>
-    </a>
+    <div class="container nav-wrap">
+      <a href="#" class="nav-brand">
+        <div class="brand-symbol">MV</div>
+        <span>Masoud Valizadeh</span>
+      </a>
 
-    <ul class="nav-items">
-      <li><a href="#about" data-i18n="nav_about">Philosophy</a></li>
-      <li><a href="#projects" data-i18n="nav_projects">All Case Studies</a></li>
-      <li><a href="#skills" data-i18n="nav_skills">Toolkit</a></li>
-      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-    </ul>
+      <ul class="nav-menu">
+        <li><a href="#about" data-i18n="nav_about">Philosophy</a></li>
+        <li><a href="#ledger" data-i18n="nav_ledger">Engineering Ledger</a></li>
+        <li><a href="#matrix" data-i18n="nav_matrix">Capabilities</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
 
-    <div class="nav-tools">
-      <button id="langToggle" class="action-btn" title="Toggle Language">
-        <span>🌐</span> <span id="langIndicator">FA</span>
-      </button>
-      <button id="themeToggle" class="action-btn" title="Toggle Theme">🌙</button>
-      <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn btn-solid" style="padding: 0.45rem 1.1rem; font-size: 0.82rem;" data-i18n="nav_cv">CV (PDF)</a>
+      <div class="nav-tools">
+        <button id="langTrigger" class="tool-btn" title="Toggle Language">
+          <span id="langValue">FA</span>
+        </button>
+        <button id="themeTrigger" class="tool-btn" title="Toggle Mode">
+          <span id="themeValue">MODE</span>
+        </button>
+        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="tool-btn" style="border-color: var(--text-high);" data-i18n="nav_cv">CV.PDF</a>
+      </div>
     </div>
   </nav>
 
-  <!-- هیرو اصلی -->
+  <!-- بخش اصلی هیرو -->
   <header class="hero container">
-    <div class="hero-layout">
+    <div class="hero-meta">
+      <div class="status-live">
+        <span class="live-dot"></span>
+        <span data-i18n="meta_status">Operational Cadence & Delivery Flow</span>
+      </div>
+      <span style="letter-spacing: 0.12em;">LOCATION: TEHRAN / REMOTE</span>
+    </div>
+
+    <div class="hero-grid">
       <div>
-        <div class="live-status-pill">
-          <span class="pulse-dot"></span>
-          <span data-i18n="hero_status">Live Delivery & Flow Engineering</span>
-        </div>
         <h1 class="hero-title">
-          <span class="gradient-heading" data-i18n="hero_head">Software Delivery Engineered for Predictability.</span>
+          <span data-i18n="hero_t1">Flow Over Ceremony.</span><br />
+          <span class="dimmed" data-i18n="hero_t2">Delivery Over Theater.</span>
         </h1>
-        <p class="hero-summary" data-i18n="hero_body">
-          Software engineering background dedicated to eliminating Agile ceremony theater, resolving cross-squad API dependencies, and orchestrating sustainable release cadences through empirical flow analytics.
+
+        <p class="hero-lead" data-i18n="hero_desc">
+          Technical Scrum Master and Delivery Lead with a software engineering foundation. Eliminating performative rituals, resolving cross-squad API dependencies, and orchestrating predictable release cadences via quantitative flow analytics.
         </p>
-        <div class="hero-cta-group">
-          <a href="#projects" class="btn btn-solid" data-i18n="btn_explore">Explore All Projects</a>
-          <a href="mailto:masoudvzii@gmail.com" class="btn btn-outline" data-i18n="btn_contact">Initiate Technical Chat</a>
+
+        <div class="hero-actions">
+          <a href="#ledger" class="btn btn-solid" data-i18n="btn_ledger">Inspect Dossiers</a>
+          <a href="mailto:masoudvzii@gmail.com" class="btn btn-line" data-i18n="btn_inquiry">Direct Inquiry</a>
         </div>
       </div>
 
-      <!-- کارت هویت اجرایی با پرتره و مانیتورینگ متریک‌ها -->
-      <div class="executive-card">
-        <div class="exec-profile-row">
-          <div class="exec-portrait-frame">
-            <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="exec-portrait-img" onerror="this.src='https://via.placeholder.com/90'" />
-            <div class="exec-verify-badge" title="Open to Delivery Roles"></div>
-          </div>
-          <div class="exec-meta">
-            <h3>Masoud Valizadeh</h3>
-            <p data-i18n="exec_title">Technical Delivery Lead / Scrum Master</p>
-            <span style="font-size: 0.78rem; color: var(--emerald-live); font-weight: 700;">● Active in Ecosystem</span>
-          </div>
+      <!-- پنل پرتره و مانیفست مهندسی -->
+      <div class="hero-portrait-card">
+        <div class="portrait-box">
+          <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="portrait-img" onerror="this.src='https://via.placeholder.com/320'" />
         </div>
-
-        <div class="flow-monitor">
-          <div class="flow-monitor-title">
-            <span data-i18n="flow_title">Delivery Flow Indicators</span>
-            <span>● EMPIRICAL</span>
+        <div class="system-manifest">
+          <div class="manifest-row">
+            <span class="manifest-k">DISCIPLINE</span>
+            <span class="manifest-v">Technical Delivery Lead</span>
           </div>
-          <div class="flow-bars">
-            <div class="flow-bar-item">
-              <div class="flow-label-row">
-                <span data-i18n="f_label1">Cycle Time Reduction</span>
-                <span style="color: var(--teal-precision); font-family: var(--font-code);">-35% Latency</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill" style="width: 76%;"></div></div>
-            </div>
-            <div class="flow-bar-item">
-              <div class="flow-label-row">
-                <span data-i18n="f_label2">WIP Limit Strict Governance</span>
-                <span style="color: var(--emerald-live); font-family: var(--font-code);">Enforced</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill" style="width: 100%; background: var(--emerald-live);"></div></div>
-            </div>
-            <div class="flow-bar-item">
-              <div class="flow-label-row">
-                <span data-i18n="f_label3">Agile Ceremony Overhead</span>
-                <span style="color: #64748b; font-family: var(--font-code);">0% Fluff</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill" style="width: 15%; background: var(--primary);"></div></div>
-            </div>
+          <div class="manifest-row">
+            <span class="manifest-k">ALIGNMENT</span>
+            <span class="manifest-v">API Contracts & Mocking</span>
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-k">GOVERNANCE</span>
+            <span class="manifest-v">Cycle Time / WIP Limits</span>
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-k">PARLIAMENT AWARD</span>
+            <span class="manifest-v" style="color: var(--award-gold);">1st Place (Modarres)</span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- بنر دستاورد ملی (جشنواره شهید مدرس - مجلس شورای اسلامی) -->
-  <div class="container">
-    <div class="award-card">
-      <div class="award-seal">🏆</div>
-      <div class="award-copy">
-        <h3 data-i18n="award_title">1st Place — 6th Shahid Modarres National Festival (Iranian Parliament)</h3>
-        <p data-i18n="award_desc">
-          Honored with first place for co-authoring the macro governance framework for participatory NGO oversight in parliamentary supervision (Dec 2025). Validates systemic thinking, institutional process engineering, and high-impact structural governance.
-        </p>
-      </div>
+  <!-- نوار متحرک Awwwards Marquee -->
+  <div class="ticker-ribbon">
+    <div class="ticker-track">
+      <span>Flow Architecture</span>
+      <span>•</span>
+      <span>Anti-Agile Theater</span>
+      <span>•</span>
+      <span>API Contract First</span>
+      <span>•</span>
+      <span>Zero Regression Payments</span>
+      <span>•</span>
+      <span>WIP Strict Governance</span>
+      <span>•</span>
+      <span>Lead Time Reduction</span>
+      <span>•</span>
+      <span>Flow Architecture</span>
+      <span>•</span>
+      <span>Anti-Agile Theater</span>
+      <span>•</span>
+      <span>API Contract First</span>
+      <span>•</span>
+      <span>Zero Regression Payments</span>
+      <span>•</span>
+      <span>WIP Strict Governance</span>
+      <span>•</span>
+      <span>Lead Time Reduction</span>
     </div>
   </div>
 
-  <!-- ماتریس کامل پروژه‌ها و کیس‌استادی‌های واقعی -->
-  <section id="projects" class="container">
-    <div class="section-headline">
-      <div class="section-tagline" data-i18n="proj_tag">Case Studies & Track Record</div>
-      <h2 class="section-title" data-i18n="proj_head">Comprehensive Delivery Portfolio</h2>
+  <!-- دستاورد ملی جشنواره شهید مدرس -->
+  <section class="container">
+    <div class="monument-award">
+      <div class="award-num">01</div>
+      <div class="award-body">
+        <h3 data-i18n="aw_head">1st Place — 6th Shahid Modarres National Festival (Parliament Research Center)</h3>
+        <p data-i18n="aw_body">
+          Awarded first place nationally for co-authoring the macro-level governance framework for civil society oversight in parliamentary monitoring (joint submission with Dr. Siavash Sayyar Irani — Dec 2025). Validates structural process engineering, systemic architecture, and macro-organizational mechanics[cite: 2].
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- پرونده پروژه‌ها و سوابق عملیاتی (Engineering Ledger) -->
+  <section id="ledger" class="container">
+    <div class="section-bar">
+      <div>
+        <div class="section-index">02 / DOSSIERS</div>
+        <h2 class="section-name" data-i18n="sec_ledger_title">Engineering Delivery Ledger</h2>
+      </div>
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-low);">ACTIVE PORTFOLIO</span>
     </div>
 
-    <div class="bento-grid">
-      <!-- پروژه ۱: TrexNow -->
-      <div class="bento-cell cell-8">
+    <div class="ledger-grid">
+      <!-- پرونده ۱: TrexNow -->
+      <div class="ledger-card col-8">
         <div>
-          <div class="tag-container">
-            <span class="chip">Logistics & Delivery</span>
-            <span class="chip">API Contracts</span>
-            <span class="chip">Mock Servers</span>
-          </div>
-          <h3 data-i18n="p1_title">TrexNow Delivery & Logistics Ecosystem</h3>
-          <p data-i18n="p1_desc">
-            Eliminated Frontend idle-time wait states by establishing strict OpenAPI contracts and Mock Server standards in Confluence, decoupling mobile & UI squads from ongoing backend microservice refactors.
+          <span class="entry-meta">ENTRY #01 — LOGISTICS & INFRASTRUCTURE</span>
+          <h3 data-i18n="d1_head">TrexNow Delivery & Hyper-Logistics Engine</h3>
+          <p data-i18n="d1_desc">
+            Eliminated Frontend squad idle time by defining strict OpenAPI contracts and deploying Confluence-backed Mock Servers, completely decoupling UI delivery from ongoing backend microservice refactoring.
           </p>
         </div>
 
-        <div class="code-console">
-          <div class="console-header">
-            <span class="c-dot c-red"></span>
-            <span class="c-dot c-yellow"></span>
-            <span class="c-dot c-green"></span>
-            <span style="margin-left: 0.5rem; color: #94a3b8; font-size: 0.72rem;">confluence / trexnow-contract.json</span>
-          </div>
-          <div class="console-content">
-            <span class="c-dim">// Pre-Sprint Contract Verification</span><br />
-            {<br />
-            &nbsp;&nbsp;<span class="c-cyan">"endpoint"</span>: <span class="c-green-text">"/api/v2/dispatch/assign"</span>,<br />
-            &nbsp;&nbsp;<span class="c-cyan">"mock_state"</span>: <span class="c-green-text">"ACTIVE_STUB"</span>,<br />
-            &nbsp;&nbsp;<span class="c-cyan">"frontend_blockers"</span>: <span class="c-green-text">0</span><br />
-            }
-          </div>
+        <div class="code-manifest">
+          <span class="dim">// Schema Decoupling Protocol</span><br />
+          { <span class="light">"endpoint"</span>: "/api/v2/dispatch/assign", <span class="light">"mock_state"</span>: "DEPLOYED", <span class="light">"frontend_blockers"</span>: 0 }
         </div>
       </div>
 
-      <!-- پروژه ۲: پلتفرم SocialOrder -->
-      <div class="bento-cell cell-4" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, var(--bg-surface) 100%);">
+      <!-- پرونده ۲: SocialOrder -->
+      <div class="ledger-card col-4">
         <div>
-          <div class="tag-container">
-            <span class="chip">E-Commerce & Orders</span>
-            <span class="chip">INVEST Slicing</span>
-          </div>
-          <h3 data-i18n="p2_title">SocialOrder Platform</h3>
-          <p data-i18n="p2_desc">
-            Facilitated cross-functional product refinements, established strict Definition of Ready (DoR), and sliced bulky order-management features into atomic 1-2 day user stories using Planning Poker.
+          <span class="entry-meta">ENTRY #02 — COMMERCE PLATFORM</span>
+          <h3 data-i18n="d2_head">SocialOrder Commerce Engine</h3>
+          <p data-i18n="d2_desc">
+            Enforced rigid Definition of Ready (DoR). Sliced bulky feature epics into atomic 1-2 day user stories using Planning Poker to eliminate mid-sprint scope creep.
           </p>
         </div>
-        <div style="background: rgba(7, 12, 24, 0.5); border-radius: 12px; padding: 1.2rem; border: 1px solid var(--border-subtle);">
-          <div style="font-size: 1.6rem; font-weight: 850; color: var(--teal-precision); font-family: var(--font-code);">DoR / DoD</div>
-          <div style="font-size: 0.8rem; color: var(--text-med);" data-i18n="p2_kpi">Zero ambiguity in acceptance criteria before sprint commits.</div>
+        <div class="kpi-block">
+          <div class="kpi-metric">100%</div>
+          <div class="kpi-caption" data-i18n="d2_kpi">Clarity in Acceptance Criteria prior to sprint initiation.</div>
         </div>
       </div>
 
-      <!-- پروژه ۳: QuesShare Platform -->
-      <div class="bento-cell cell-4">
+      <!-- پرونده ۳: QuesShare -->
+      <div class="ledger-card col-4">
         <div>
-          <div class="tag-container">
-            <span class="chip">Knowledge Platform</span>
-            <span class="chip">Sprint Cadence</span>
-          </div>
-          <h3 data-i18n="p3_title">QuesShare Collaborative Platform</h3>
-          <p data-i18n="p3_desc">
-            Standardized end-to-end sprint cadences, improved stakeholder feedback loops during Sprint Reviews, and maintained high throughput through backlog prioritization.
+          <span class="entry-meta">ENTRY #03 — COLLABORATION</span>
+          <h3 data-i18n="d3_head">QuesShare Collaborative Platform</h3>
+          <p data-i18n="d3_desc">
+            Established structured Sprint Reviews, tightened feedback loops with primary stakeholders, and maintained continuous throughput through disciplined backlog prioritization.
           </p>
         </div>
-        <div style="background: rgba(7, 12, 24, 0.5); border-radius: 12px; padding: 1.2rem; border: 1px solid var(--border-subtle);">
-          <div style="font-size: 1.6rem; font-weight: 850; color: var(--emerald-live); font-family: var(--font-code);">+25% Flow</div>
-          <div style="font-size: 0.8rem; color: var(--text-med);" data-i18n="p3_kpi">Higher sprint commitment reliability without overtime.</div>
+        <div class="kpi-block">
+          <div class="kpi-metric">+25%</div>
+          <div class="kpi-caption" data-i18n="d3_kpi">Sprint commitment reliability without developer crunch.</div>
         </div>
       </div>
 
-      <!-- پروژه ۴: درگاه‌های پرداخت، فین‌تک و Web3 / Stripe -->
-      <div class="bento-cell cell-4">
+      <!-- پرونده ۴: درگاه‌های پرداخت، فین‌تک و Stripe -->
+      <div class="ledger-card col-4">
         <div>
-          <div class="tag-container">
-            <span class="chip">FinTech & Stripe</span>
-            <span class="chip">Web3 Integrations</span>
-          </div>
-          <h3 data-i18n="p4_title">FinTech & Payment Architecture</h3>
-          <p data-i18n="p4_desc">
-            Orchestrated squad delivery across transactional payment gateways (Stripe APIs) and Web3 financial modules, ensuring zero transaction regression and rigorous security acceptance criteria.
+          <span class="entry-meta">ENTRY #04 — FINTECH & PAYMENTS</span>
+          <h3 data-i18n="d4_head">Payment Gateways & Stripe Architecture</h3>
+          <p data-i18n="d4_desc">
+            Coordinated delivery cycles for transactional payment gateway integrations (Stripe API) and Web3 financial modules under strict security and zero-regression DoD requirements.
           </p>
         </div>
-        <div style="color: var(--teal-precision); font-size: 0.85rem; font-weight: 600;" data-i18n="p4_quote">
-          “Reliable transactional delivery through hardened Definition of Done.”
+        <div class="kpi-block">
+          <div class="kpi-metric">0%</div>
+          <div class="kpi-caption" data-i18n="d4_kpi">Transaction regression rate across deployment cycles.</div>
         </div>
       </div>
 
-      <!-- فلسفه ۵: ذهنیت ضد تئاتر چابک و هماهنگی با هوش مصنوعی -->
-      <div class="bento-cell cell-4">
+      <!-- پرونده ۵: ذهنیت ضد تئاتر چابک -->
+      <div class="ledger-card col-4">
         <div>
-          <div class="tag-container">
-            <span class="chip">Delivery Mindset</span>
-            <span class="chip">AI-Assisted</span>
-          </div>
-          <h3 data-i18n="p5_title">Anti-Agile Theater & AI Delivery</h3>
-          <p data-i18n="p5_desc">
-            Moving Jira cards or holding 30-minute status meetings isn't agility. Agility is leveraging AI-assisted coordination and shortening lead time from commit to verified production deployment.
+          <span class="entry-meta">ENTRY #05 — GOVERNANCE DOCTRINE</span>
+          <h3 data-i18n="d5_head">Anti-Agile Theater Mindset</h3>
+          <p data-i18n="d5_desc">
+            Replaced performative meetings and whiteboard aesthetics with actual deployment metrics. Focus on lowering Lead Time from code commit to verified production deployment.
           </p>
         </div>
-        <div style="color: var(--text-high); font-size: 0.85rem; font-weight: 600;" data-i18n="p5_quote">
-          “Shield developers from administrative noise; measure velocity by running software.”
+        <div class="kpi-block">
+          <div class="kpi-metric">FLOW</div>
+          <div class="kpi-caption" data-i18n="d5_kpi">Working software prioritized over ritual documentation.</div>
         </div>
       </div>
 
-      <!-- سابقه ۶: شرکت‌های سازمانی Innovative Future Software House & Apsy -->
-      <div class="bento-cell cell-12">
+      <!-- پرونده ۶: شرکت‌های سازمانی Innovative Future و Apsy -->
+      <div class="ledger-card col-12">
         <div>
-          <div class="tag-container">
-            <span class="chip">Apsy (Up to May 2024)</span>
-            <span class="chip">Innovative Future Software House (May 2024 - Present)</span>
-            <span class="chip">Capacity Budgeting</span>
-          </div>
-          <h3 data-i18n="p6_title">Organizational Delivery: Innovative Future Software House & Apsy</h3>
-          <p data-i18n="p6_desc">
-            Facilitated cross-squad Scrum events across both organizations. Instituted a permanent 20% sprint capacity reserve dedicated to technical debt refactoring, established blameless retrospectives, and built an open psychological safety culture.
+          <span class="entry-meta">ENTRY #06 — ORGANIZATIONAL SCALE & CONTINUOUS DELIVERY</span>
+          <h3 data-i18n="d6_head">Innovative Future Software House & Apsy</h3>
+          <p data-i18n="d6_desc">
+            Led cross-squad Scrum facilitation across Apsy (until May 2024) and Innovative Future Software House (May 2024 - Present). Standardized a permanent 20% sprint capacity reserve for technical debt refactoring and instituted blameless retrospectives.
           </p>
         </div>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 220px; background: rgba(7, 12, 24, 0.5); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.1rem;">
-            <strong style="color: var(--text-high); font-size: 1.05rem;">20% SPRINT BUFFER</strong>
-            <p style="font-size: 0.8rem; color: var(--text-med); margin-bottom: 0;" data-i18n="p6_sub1">Reserved for Tech Debt & Code Refactoring</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+          <div style="border-left: 2px solid var(--border-strong); padding-left: 1.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 800;">20% SPRINT BUFFER</div>
+            <div style="font-size: 0.8rem; color: var(--text-low);" data-i18n="d6_k1">Hardened reserve for architecture refactoring.</div>
           </div>
-          <div style="flex: 1; min-width: 220px; background: rgba(7, 12, 24, 0.5); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.1rem;">
-            <strong style="color: var(--emerald-live); font-size: 1.05rem;">BLAMELESS RETROS</strong>
-            <p style="font-size: 0.8rem; color: var(--text-med); margin-bottom: 0;" data-i18n="p6_sub2">High psychological safety and action-oriented takeaways</p>
+          <div style="border-left: 2px solid var(--border-strong); padding-left: 1.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 800;">BLAMELESS RETROS</div>
+            <div style="font-size: 0.8rem; color: var(--text-low);" data-i18n="d6_k2">Action-driven root cause discovery.</div>
           </div>
-          <div style="flex: 1; min-width: 220px; background: rgba(7, 12, 24, 0.5); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.1rem;">
-            <strong style="color: var(--teal-precision); font-size: 1.05rem;">CROSS-SQUAD FLOW</strong>
-            <p style="font-size: 0.8rem; color: var(--text-med); margin-bottom: 0;" data-i18n="p6_sub3">Synchronized release cadences without micromanagement</p>
+          <div style="border-left: 2px solid var(--border-strong); padding-left: 1.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 800;">CROSS-SQUAD CADENCE</div>
+            <div style="font-size: 0.8rem; color: var(--text-low);" data-i18n="d6_k3">Synchronized releases without micro-management.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- جعبه‌ابزار فنی -->
-  <section id="skills" class="container">
-    <div class="section-headline">
-      <div class="section-tagline" data-i18n="sk_tag">Capabilities</div>
-      <h2 class="section-title" data-i18n="sk_head">Technical Toolkit & Delivery Competencies</h2>
+  <!-- ماتریس قابلیت‌ها و جعبه‌ابزار -->
+  <section id="matrix" class="container">
+    <div class="section-bar">
+      <div>
+        <div class="section-index">03 / CAPABILITIES</div>
+        <h2 class="section-name" data-i18n="sec_matrix_title">Competencies & Tooling</h2>
+      </div>
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-low);">SYSTEM MATRIX</span>
     </div>
 
-    <div class="skills-matrix">
-      <div class="skill-card">
-        <h4 data-i18n="sk_c1"><span>⚡</span> Delivery Frameworks</h4>
-        <div class="skill-badges">
-          <span class="skill-badge">Scrum & Kanban</span>
-          <span class="skill-badge">Sprint Cadence</span>
-          <span class="skill-badge">Backlog Refinement</span>
-          <span class="skill-badge">DoR & DoD Enforcement</span>
-          <span class="skill-badge">Scope Trimming (MVP)</span>
-        </div>
+    <div class="capabilities-grid">
+      <div class="cap-column">
+        <h4 data-i18n="c_m1">Frameworks</h4>
+        <ul class="cap-list">
+          <li>Scrum & Kanban</li>
+          <li>Sprint Cadence</li>
+          <li>Backlog Refinement</li>
+          <li>DoR & DoD Governance</li>
+          <li>Scope Trimming (MVP)</li>
+        </ul>
       </div>
 
-      <div class="skill-card">
-        <h4 data-i18n="sk_c2"><span>📈</span> Flow & Data Metrics</h4>
-        <div class="skill-badges">
-          <span class="skill-badge">Cycle Time & Lead Time</span>
-          <span class="skill-badge">CFD Diagrams</span>
-          <span class="skill-badge">WIP Limits</span>
-          <span class="skill-badge">Throughput Analysis</span>
-          <span class="skill-badge">Capacity Forecasting</span>
-        </div>
+      <div class="cap-column">
+        <h4 data-i18n="c_m2">Flow & Metrics</h4>
+        <ul class="cap-list">
+          <li>Cycle Time & Lead Time</li>
+          <li>Cumulative Flow (CFD)</li>
+          <li>WIP Limit Enforcement</li>
+          <li>Throughput Analysis</li>
+          <li>Capacity Forecasting</li>
+        </ul>
       </div>
 
-      <div class="skill-card">
-        <h4 data-i18n="sk_c3"><span>🛠️</span> Engineering Alignment</h4>
-        <div class="skill-badges">
-          <span class="skill-badge">Jira Advanced Workflows</span>
-          <span class="skill-badge">Confluence Architecture</span>
-          <span class="skill-badge">API Contracts & Mocking</span>
-          <span class="skill-badge">Git Version Control</span>
-          <span class="skill-badge">CI/CD Pipeline Awareness</span>
-          <span class="skill-badge">AI-Assisted Delivery</span>
-        </div>
+      <div class="cap-column">
+        <h4 data-i18n="c_m3">Engineering</h4>
+        <ul class="cap-list">
+          <li>Jira Advanced Schemes</li>
+          <li>Confluence Docs</li>
+          <li>API Contracts & Mocking</li>
+          <li>Git SDLC Lifecycle</li>
+          <li>CI/CD Pipeline Flow</li>
+        </ul>
       </div>
 
-      <div class="skill-card">
-        <h4 data-i18n="sk_c4"><span>🤝</span> Servant Leadership</h4>
-        <div class="skill-badges">
-          <span class="skill-badge">Cross-Squad Alignment</span>
-          <span class="skill-badge">Team Shielding</span>
-          <span class="skill-badge">Conflict Resolution</span>
-          <span class="skill-badge">1-on-1 Mentorship</span>
-          <span class="skill-badge">Psychological Safety</span>
-        </div>
+      <div class="cap-column">
+        <h4 data-i18n="c_m4">Leadership</h4>
+        <ul class="cap-list">
+          <li>Cross-Squad Alignment</li>
+          <li>Developer Shielding</li>
+          <li>Conflict Mediation</li>
+          <li>1-on-1 Mentorship</li>
+          <li>Psychological Safety</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- کارت ارتباط و استخدام -->
+  <!-- استعلام همکاری و تماس -->
   <section id="contact" class="container">
-    <div class="cta-container">
-      <h2 data-i18n="cta_title">Ready to Accelerate Engineering Flow?</h2>
-      <p data-i18n="cta_desc">
-        Seeking a Technical Delivery Lead or Scrum Master to eliminate bottlenecks, decouple squad dependencies, and build a predictable release cadence? Let’s connect.
+    <div class="inquiry-monolith">
+      <h2 data-i18n="inq_head">Initiate Technical Engagement.</h2>
+      <p data-i18n="inq_body">
+        Available for Technical Scrum Master, Delivery Lead, or Flow Engineering engagements where outcome velocity is prioritized over ceremony.
       </p>
-      <div class="cta-actions">
-        <a href="mailto:masoudvzii@gmail.com" class="btn btn-solid">
-          <span>✉️</span> <span data-i18n="btn_email">Direct Email</span>
-        </a>
-        <a href="https://linkedin.com/in/masoud-valizadeh" target="_blank" rel="noopener" class="btn btn-outline">
-          <span>💼</span> <span>LinkedIn Profile</span>
-        </a>
-        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn btn-outline">
-          <span>📄</span> <span data-i18n="btn_resume">Download CV (PDF)</span>
-        </a>
+      <div class="inquiry-buttons">
+        <a href="mailto:masoudvzii@gmail.com" class="btn btn-solid" data-i18n="btn_direct_email">masoudvzii@gmail.com</a>
+        <a href="https://linkedin.com/in/masoud-valizadeh" target="_blank" rel="noopener" class="btn btn-line">LinkedIn Profile</a>
+        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn btn-line" data-i18n="btn_cv_get">Download CV (PDF)</a>
       </div>
     </div>
   </section>
 
-  <!-- فوتر -->
-  <footer>
-    <div class="container">
-      <p data-i18n="footer_copy">© 2026 Masoud Valizadeh — Engineered with Flow Metrics & High-Trust Architecture.</p>
-    </div>
+  <!-- فوتر سوئیسی -->
+  <footer class="container">
+    <div>© 2026 MASOUD VALIZADEH — FLOW DELIVERY ARCHITECTURE</div>
+    <div>MONOCHROME PRECISION // NO AI FLUFF</div>
   </footer>
 
-  <!-- اسکریپت دو زبانه آنی -->
+  <!-- اسکریپت کنترل دوزبانه و تم مونوکروم -->
   <script>
-    const langDictionary = {
+    const translations = {
       en: {
         dir: "ltr",
         lang: "en",
         nav_about: "Philosophy",
-        nav_projects: "All Case Studies",
-        nav_skills: "Toolkit",
+        nav_ledger: "Engineering Ledger",
+        nav_matrix: "Capabilities",
         nav_contact: "Contact",
-        nav_cv: "CV (PDF)",
-        hero_status: "Live Delivery & Flow Engineering",
-        hero_head: "Software Delivery Engineered for Predictability.",
-        hero_body: "Software engineering background dedicated to eliminating Agile ceremony theater, resolving cross-squad API dependencies, and orchestrating sustainable release cadences through empirical flow analytics.",
-        btn_explore: "Explore All Projects",
-        btn_contact: "Initiate Technical Chat",
-        exec_title: "Technical Delivery Lead / Scrum Master",
-        flow_title: "Delivery Flow Indicators",
-        f_label1: "Cycle Time Reduction",
-        f_label2: "WIP Limit Strict Governance",
-        f_label3: "Agile Ceremony Overhead",
-        award_title: "1st Place — 6th Shahid Modarres National Festival (Parliament Research Center)",
-        award_desc: "Honored with first place for co-authoring the structural framework for NGO-driven participatory oversight in parliamentary supervision (Dec 2025). Reflects systemic vision, institutional process engineering, and high-impact structural governance.",
-        proj_tag: "Case Studies & Track Record",
-        proj_head: "Comprehensive Delivery Portfolio",
-        p1_title: "TrexNow Delivery & Logistics Ecosystem",
-        p1_desc: "Eliminated Frontend idle-time wait states by establishing strict OpenAPI contracts and Mock Server standards in Confluence, decoupling mobile & UI squads from ongoing backend microservice refactors.",
-        p2_title: "SocialOrder Platform",
-        p2_desc: "Facilitated cross-functional product refinements, established strict Definition of Ready (DoR), and sliced bulky order-management features into atomic 1-2 day user stories using Planning Poker.",
-        p2_kpi: "Zero ambiguity in acceptance criteria before sprint commits.",
-        p3_title: "QuesShare Collaborative Platform",
-        p3_desc: "Standardized end-to-end sprint cadences, improved stakeholder feedback loops during Sprint Reviews, and maintained high throughput through backlog prioritization.",
-        p3_kpi: "Higher sprint commitment reliability without overtime.",
-        p4_title: "FinTech & Payment Architecture",
-        p4_desc: "Orchestrated squad delivery across transactional payment gateways (Stripe APIs) and Web3 financial modules, ensuring zero transaction regression and rigorous security acceptance criteria.",
-        p4_quote: "“Reliable transactional delivery through hardened Definition of Done.”",
-        p5_title: "Anti-Agile Theater & AI Delivery",
-        p5_desc: "Moving Jira cards or holding 30-minute status meetings isn't agility. Agility is leveraging AI-assisted coordination and shortening lead time from commit to verified production deployment.",
-        p5_quote: "“Shield developers from administrative noise; measure velocity by running software.”",
-        p6_title: "Organizational Delivery: Innovative Future Software House & Apsy",
-        p6_desc: "Facilitated cross-squad Scrum events across both organizations. Instituted a permanent 20% sprint capacity reserve dedicated to technical debt refactoring, established blameless retrospectives, and built an open psychological safety culture.",
-        p6_sub1: "Reserved for Tech Debt & Code Refactoring",
-        p6_sub2: "High psychological safety and action-oriented takeaways",
-        p6_sub3: "Synchronized release cadences without micromanagement",
-        sk_tag: "Capabilities",
-        sk_head: "Technical Toolkit & Delivery Competencies",
-        sk_c1: "Delivery Frameworks",
-        sk_c2: "Flow & Data Metrics",
-        sk_c3: "Engineering Alignment",
-        sk_c4: "Servant Leadership",
-        cta_title: "Ready to Accelerate Engineering Flow?",
-        cta_desc: "Seeking a Technical Delivery Lead or Scrum Master to eliminate bottlenecks, decouple squad dependencies, and build a predictable release cadence? Let’s connect.",
-        btn_email: "Direct Email",
-        btn_resume: "Download CV (PDF)",
-        footer_copy: "© 2026 Masoud Valizadeh — Engineered with Flow Metrics & High-Trust Architecture."
+        nav_cv: "CV.PDF",
+        meta_status: "Operational Cadence & Delivery Flow",
+        hero_t1: "Flow Over Ceremony.",
+        hero_t2: "Delivery Over Theater.",
+        hero_desc: "Technical Scrum Master and Delivery Lead with a software engineering foundation. Eliminating performative rituals, resolving cross-squad API dependencies, and orchestrating predictable release cadences via quantitative flow analytics.",
+        btn_ledger: "Inspect Dossiers",
+        btn_inquiry: "Direct Inquiry",
+        aw_head: "1st Place — 6th Shahid Modarres National Festival (Parliament Research Center)",
+        aw_body: "Awarded first place nationally for co-authoring the macro-level governance framework for civil society oversight in parliamentary monitoring (joint submission with Dr. Siavash Sayyar Irani — Dec 2025). Validates structural process engineering, systemic architecture, and macro-organizational mechanics.",
+        sec_ledger_title: "Engineering Delivery Ledger",
+        d1_head: "TrexNow Delivery & Hyper-Logistics Engine",
+        d1_desc: "Eliminated Frontend squad idle time by defining strict OpenAPI contracts and deploying Confluence-backed Mock Servers, completely decoupling UI delivery from ongoing backend microservice refactoring.",
+        d2_head: "SocialOrder Commerce Engine",
+        d2_desc: "Enforced rigid Definition of Ready (DoR). Sliced bulky feature epics into atomic 1-2 day user stories using Planning Poker to eliminate mid-sprint scope creep.",
+        d2_kpi: "Clarity in Acceptance Criteria prior to sprint initiation.",
+        d3_head: "QuesShare Collaborative Platform",
+        d3_desc: "Established structured Sprint Reviews, tightened feedback loops with primary stakeholders, and maintained continuous throughput through disciplined backlog prioritization.",
+        d3_kpi: "Sprint commitment reliability without developer crunch.",
+        d4_head: "Payment Gateways & Stripe Architecture",
+        d4_desc: "Coordinated delivery cycles for transactional payment gateway integrations (Stripe API) and Web3 financial modules under strict security and zero-regression DoD requirements.",
+        d4_kpi: "Transaction regression rate across deployment cycles.",
+        d5_head: "Anti-Agile Theater Mindset",
+        d5_desc: "Replaced performative meetings and whiteboard aesthetics with actual deployment metrics. Focus on lowering Lead Time from code commit to verified production deployment.",
+        d5_kpi: "Working software prioritized over ritual documentation.",
+        d6_head: "Innovative Future Software House & Apsy",
+        d6_desc: "Led cross-squad Scrum facilitation across Apsy (until May 2024) and Innovative Future Software House (May 2024 - Present). Standardized a permanent 20% sprint capacity reserve for technical debt refactoring and instituted blameless retrospectives.",
+        d6_k1: "Hardened reserve for architecture refactoring.",
+        d6_k2: "Action-driven root cause discovery.",
+        d6_k3: "Synchronized releases without micro-management.",
+        sec_matrix_title: "Competencies & Tooling",
+        c_m1: "Frameworks",
+        c_m2: "Flow & Metrics",
+        c_m3: "Engineering",
+        c_m4: "Leadership",
+        inq_head: "Initiate Technical Engagement.",
+        inq_body: "Available for Technical Scrum Master, Delivery Lead, or Flow Engineering engagements where outcome velocity is prioritized over ceremony.",
+        btn_direct_email: "masoudvzii@gmail.com",
+        btn_cv_get: "Download CV (PDF)"
       },
       fa: {
         dir: "rtl",
         lang: "fa",
-        nav_about: "فلسفه کاری",
-        nav_projects: "تمامی پروژه‌ها",
-        nav_skills: "جعبه‌ابزار",
+        nav_about: "اصول راهبری",
+        nav_ledger: "پرونده‌های مهندسی",
+        nav_matrix: "جعبه‌ابزار",
         nav_contact: "ارتباط",
-        nav_cv: "دریافت رزومه (PDF)",
-        hero_status: "دلیوری زنده و مهندسی جریان کار",
-        hero_head: "مهندسی تحویل نرم‌افزار، مبتنی بر پیش‌بینی‌پذیری پایدار.",
-        hero_body: "کارشناس مهندسی نرم‌افزار با تمرکز بر حذف جلسات صوری و تئاتر چابک، باز کردن اصطکاک‌های وابسته میان اسکوادها و ایجاد ریتم منظم تحویل کدهای تست‌شده با متریک‌های واقعی جریان کار.",
-        btn_explore: "مشاهده تمام پروژه‌ها",
-        btn_contact: "درخواست گفت‌وگوی فنی",
-        exec_title: "اسکرام‌مستر و هماهنگ‌کننده تحویل فنی",
-        flow_title: "شاخص‌های جریان تحویل",
-        f_label1: "کاهش زمان چرخه (Cycle Time)",
-        f_label2: "اعمال محدودیت کار در جریان (WIP)",
-        f_label3: "اتلاف جلسات و تشریفات صوری",
-        award_title: "کسب مقام اول در ششمین جشنواره شهید مدرس (مجلس شورای اسلامی)",
-        award_desc: "کسب رتبه نخست برای ارائه طرح سازوکار مشارکت سازمان‌های مردم‌نهاد در نظارت پارلمانی (مشترک با دکتر سیاوش سیار ایرانی - آذر ۱۴۰۴). نمایانگر بینش سیستمی، درک عمیق از فرآیندهای حاکمیتی و طراحی ساختارهای کلان.",
-        proj_tag: "سوابق شاخص و پروژه‌ها",
-        proj_head: "ویترین کامل پروژه‌ها و تجارب عملیاتی",
-        p1_title: "سامانه لجستیک و دلیوری TrexNow",
-        p1_desc: "حذف زمان معطلی تیم فرانت‌اند از طریق طراحی قراردادهای معین API و استقرار Mock Serverها در کانفلونس؛ پیشبرد موازی فیچرهای موبایل و وب بدون نیاز به فریز کد در زمان ریفکتور سرویس‌های بک‌اند.",
-        p2_title: "پلتفرم فروشگاهی و سفارش‌گیری SocialOrder",
-        p2_desc: "تسهیل فرآیندهای پالایش محصول، استقرار معیارهای دقیق Definition of Ready (DoR) و خرد کردن استوری‌های حجیم مدیریت سفارشات به آیتم‌های اتمیک ۱ تا ۲ روزه با استفاده از Planning Poker.",
-        p2_kpi: "حذف هرگونه ابهام در معیارهای پذیرش (AC) پیش از کامیت اسپرینت.",
-        p3_title: "پلتفرم اشتراک‌گذاری دانش QuesShare",
-        p3_desc: "استانداردسازی ریتم برگزاری رویدادهای اسپرینت، بهبود حلقه‌های بازخورد با ذی‌نفعان در جلسات Review و حفظ توان تحویل مستمر تیم از طریق اولویت‌بندی بهینه بک‌لاگ.",
-        p3_kpi: "افزایش قابلیت اتکا به تعهدات اسپرینت بدون ایجاد اضافه کاری تحمیلی.",
-        p4_title: "اکوسیستم فین‌تک، درگاه‌های پرداخت و Stripe / Web3",
-        p4_desc: "هماهنگی جریان دلیوری اسکوادها در پیاده‌سازی درگاه‌های پرداخت حساس (Stripe APIs) و ماژول‌های مالی Web3، تضمین پایداری تراکنش‌ها و اعمال معیارهای امنیتی در Definition of Done.",
-        p4_quote: "«تحویل پایدار ماژول‌های تراکنشی با استقرار چک‌لیست‌های کیفی سخت‌گیرانه.»",
-        p5_title: "دیدگاه ضد «تئاتر چابک» و هماهنگی با هوش مصنوعی",
-        p5_desc: "جابه‌جایی کارت‌های جیرا یا گزارش‌دهی روزانه اسکرام نیست؛ چابکی یعنی استفاده از ابزارهای هوش مصنوعی (AI-Assisted Coordination) جهت کوتاه‌سازی زمان رسیدن کد از کامیت تا پروداکشن.",
-        p5_quote: "«محافظت از مهندسان در برابر حواشی؛ سنجش سرعت تیم بر پایه نرم‌افزار کارا.»",
-        p6_title: "سوابق سازمانی: Innovative Future Software House و Apsy",
-        p6_desc: "تسهیل رویدادهای اسکرام در شرکت‌های Apsy (تا اردیبهشت ۱۴۰۳) و Innovative Future Software House (از اردیبهشت ۱۴۰۳ تاکنون). تخصیص سهمیه ثابت ۲۰٪ برای رفع بدهی‌های فنی و برگزاری رتروهای سازنده بدون ملامت.",
-        p6_sub1: "تخصیص ۲۰٪ سهمیه ثابت برای ریفکتور و بدهی فنی",
-        p6_sub2: "امنیت روانی بالا و تصمیم‌گیری‌های خروجی‌محور در رتروها",
-        p6_sub3: "همگام‌سازی ریلیزهای تیمی بدون نیاز به مدیریت خرد",
-        sk_tag: "شایستگی‌ها",
-        sk_head: "جعبه‌ابزار و صلاحیت‌های فنی",
-        sk_c1: "فریم‌ورک‌های چابک",
-        sk_c2: "متریک‌های داده و جریان کار",
-        sk_c3: "هم‌راستایی مهندسی و ابزارها",
-        sk_c4: "رهبری خدمت‌گزار",
-        cta_title: "آماده تسریع جریان مهندسی در سازمان شما",
-        cta_desc: "اگر به دنبال هدایت فرآیندهای دلیوری، مدیریت وابستگی‌ها و ایجاد یک ساختار انتشار پایدار در سامانه‌های با تراکنش بالا هستید، در ارتباط باشیم.",
-        btn_email: "ارسال ایمیل مستقیم",
-        btn_resume: "دریافت فایل رزومه (PDF)",
-        footer_copy: "© ۲۰۲۶ مسعود ولی‌زاده — طراحی شده بر پایه متریک‌های جریان مهندسی و معماری سازمانی با ضریب اعتماد بالا."
+        nav_cv: "دریافت رزومه",
+        meta_status: "ریتم عملیاتی و جریان دلیوری",
+        hero_t1: "اصالت جریان کار بر تشریفات.",
+        hero_t2: "دلیوری واقعی، بدون تئاتر چابک.",
+        hero_desc: "اسکرام‌مستر فنی و رهبر دلیوری با پیش‌زمینه مهندسی نرم‌افزار. تمرکز ریشه‌ای بر حذف جلسات صوری، باز کردن اصطکاک API میان اسکوادها و استقرار ریتم انتشار پایدار با تکیه بر تحلیل‌های کمی جریان کار.",
+        btn_ledger: "بررسی پرونده‌های فنی",
+        btn_inquiry: "درخواست گفت‌وگو",
+        aw_head: "کسب مقام اول در ششمین جشنواره شهید مدرس (مجلس شورای اسلامی)",
+        aw_body: "کسب رتبه نخست کشوری برای ارائه طرح سازوکار مشارکت سازمان‌های مردم‌نهاد در نظارت پارلمانی (مشترک با دکتر سیاوش سیار ایرانی — آذر ۱۴۰۴). بازتاب‌دهنده مهندسی فرآیندهای ساختاری و درک عمیق از مکانیک سیستم‌های کلان[cite: 2].",
+        sec_ledger_title: "پرونده‌های سوابق و تحویل فنی",
+        d1_head: "سامانه لجستیک و دلیوری TrexNow",
+        d1_desc: "حذف زمان معطلی تیم فرانت‌اند از طریق طراحی قراردادهای OpenAPI و استقرار سرورهای ماک در کانفلونس؛ پیشبرد موازی فیچرهای موبایل و وب حین ریفکتور سرویس‌های بک‌اند.",
+        d2_head: "پلتفرم سفارش‌گیری SocialOrder",
+        d2_desc: "استقرار معیارهای بدون اغماض DoR، خرد کردن نیازمندی‌های حجیم سفارشات به استوری‌های اتمیک ۱ تا ۲ روزه با تکنیک Planning Poker و حذف قطعی نوسانات اسکوپ.",
+        d2_kpi: "شفافیت قطعی معیارهای پذیرش (AC) پیش از تعهد اسپرینت.",
+        d3_head: "پلتفرم اشتراک دانش QuesShare",
+        d3_desc: "استانداردسازی ریتم برگزاری رویدادهای اسپرینت، بهبود حلقه‌های بازخورد با ذی‌نفعان در جلسات Review و تضمین توان تحویل مستمر تیم با اولویت‌بندی بهینه بک‌لاگ.",
+        d3_kpi: "افزایش قابلیت اتکا به تعهدات اسپرینت بدون ایجاد فشار کاری تحمیلی.",
+        d4_head: "معماری درگاه‌های پرداخت و Stripe",
+        d4_desc: "هماهنگی جریان دلیوری در پیاده‌سازی درگاه‌های پرداخت حساس (Stripe API) و ماژول‌های مالی Web3 با اعمال چک‌لیست‌های امنیتی سخت‌گیرانه در Definition of Done.",
+        d4_kpi: "نرخ خطای تراکنش صفر در زمان انتشار به پروداکشن.",
+        d5_head: "دیدگاه ضد «تئاتر چابک»",
+        d5_desc: "جایگزینی جلسات طولانی و فرمالیته با متریک‌های واقعی تحویل. تمرکز بنیادین بر کوتاه‌سازی Lead Time از کامیت تا دیپلوی ایمن در محیط پروداکشن.",
+        d5_kpi: "نرم‌افزار کارا و عملیاتی برتر از تشریفات مستندسازی صوری.",
+        d6_head: "شرکت‌های Innovative Future Software House و Apsy",
+        d6_desc: "تسهیل چرخه‌های اسکرام در شرکت‌های Apsy (تا اردیبهشت ۱۴۰۳) و Innovative Future Software House (از اردیبهشت ۱۴۰۳ تاکنون). تثبیت سهمیه ۲۰٪ ظرفیت اسپرینت برای ریفکتور بدهی‌های فنی و برگزاری رتروهای سازنده بدون ملامت.",
+        d6_k1: "سهمیه پایدار و غیرقابل مذاکره برای ریفکتور کدها.",
+        d6_k2: "ریشه‌یابی فنی چالش‌ها با امنیت روانی بالا.",
+        d6_k3: "همگام‌سازی ریلیزهای تیمی بدون نیاز به مدیریت خرد.",
+        sec_matrix_title: "صلاحیت‌های فنی و ابزارها",
+        c_m1: "فریم‌ورک‌ها",
+        c_m2: "متریک‌های جریان کار",
+        c_m3: "هم‌راستایی مهندسی",
+        c_m4: "رهبری خدمت‌گزار",
+        inq_head: "آغاز تعهد و همکاری فنی مستقیم.",
+        inq_body: "آماده پذیرش مسئولیت به عنوان اسکرام‌مستر فنی، مدیر دلیوری یا مهندسی جریان کار در سازمان‌هایی که خروجی پایدار را بر تشریفات ترجیح می‌دهند.",
+        btn_direct_email: "ارسال ایمیل کاری",
+        btn_cv_get: "دریافت فایل رزومه (PDF)"
       }
     };
 
     let activeLang = 'en';
-    const langBtn = document.getElementById('langToggle');
-    const langIndicator = document.getElementById('langIndicator');
-    const themeBtn = document.getElementById('themeToggle');
-    const root = document.documentElement;
+    const langBtn = document.getElementById('langTrigger');
+    const langVal = document.getElementById('langValue');
+    const themeBtn = document.getElementById('themeTrigger');
+    const htmlNode = document.documentElement;
 
-    function renderLanguage(lang) {
-      activeLang = lang;
-      const dict = langDictionary[lang];
-      root.setAttribute('lang', dict.lang);
-      root.setAttribute('dir', dict.dir);
-      langIndicator.textContent = lang === 'en' ? 'FA' : 'EN';
+    function renderLang(target) {
+      activeLang = target;
+      const dict = translations[target];
+      htmlNode.setAttribute('lang', dict.lang);
+      htmlNode.setAttribute('dir', dict.dir);
+      langVal.textContent = target === 'en' ? 'FA' : 'EN';
 
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (dict[key]) {
-          el.textContent = dict[key];
-        }
+        if (dict[key]) el.textContent = dict[key];
       });
     }
 
     langBtn.addEventListener('click', () => {
-      renderLanguage(activeLang === 'en' ? 'fa' : 'en');
+      renderLang(activeLang === 'en' ? 'fa' : 'en');
     });
 
     themeBtn.addEventListener('click', () => {
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      themeBtn.textContent = isDark ? '☀️' : '🌙';
+      const isDark = htmlNode.getAttribute('data-theme') === 'dark';
+      htmlNode.setAttribute('data-theme', isDark ? 'light' : 'dark');
     });
 
-    // شروع اولیه با زبان انگلیسی
-    renderLanguage('en');
+    // شروع با زبان پیش‌فرض انگلیسی
+    renderLang('en');
   </script>
 </body>
 </html>
