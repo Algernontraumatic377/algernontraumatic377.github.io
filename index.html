@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مسعود ولی‌زاده | اسکرام‌مستر و هماهنگ‌کننده تحویل فنی</title>
+  <meta name="description" content="پورتفولیو تخصصی مسعود ولی‌زاده؛ اسکرام مستر، مهندس نرم‌افزار و مروج دلیوری داده‌محور چابک بدون تئاتر چابک" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #111827;
+      --bg-card: rgba(17, 24, 39, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --accent-glow: rgba(59, 130, 246, 0.25);
+      --gold: #f59e0b;
+      --gold-glow: rgba(245, 158, 11, 0.2);
+      --badge-bg: rgba(59, 130, 246, 0.12);
+      --badge-text: #60a5fa;
+      --transition: all 0.3s ease;
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --bg-card: rgba(255, 255, 255, 0.9);
+      --border-color: rgba(0, 0, 0, 0.08);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-glow: rgba(37, 99, 235, 0.15);
+      --gold: #d97706;
+      --gold-glow: rgba(217, 119, 6, 0.15);
+      --badge-bg: rgba(37, 99, 235, 0.08);
+      --badge-text: #1d4ed8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* کانتینر عمومی */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* نوبار */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    [data-theme="light"] nav {
+      background: rgba(248, 250, 252, 0.85);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--text-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo span {
+      color: var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .theme-toggle:hover {
+      border-color: var(--accent);
+    }
+
+    /* بخش هیرو */
+    .hero {
+      padding: 160px 0 100px;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--accent) 0%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 8px 20px var(--accent-glow);
+      border: none;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      background: var(--badge-bg);
+    }
+
+    /* کارت پروفایل در هیرو */
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .metric-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .metric-item {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .metric-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .metric-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* بخش افتخار ویژه */
+    .section-award {
+      margin: 40px 0 80px;
+    }
+    .award-card {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(17, 24, 39, 0.9) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 10px 30px var(--gold-glow);
+    }
+    .award-icon {
+      font-size: 3.5rem;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .award-content h3 {
+      font-size: 1.35rem;
+      color: var(--gold);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .award-content p {
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    /* عناوین سکشن‌ها */
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* فلسفه کاری */
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 100px;
+    }
+    .philo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: var(--transition);
+    }
+    .philo-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .philo-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--badge-bg);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .philo-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .philo-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* پروژه‌ها و تجربیات */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2rem;
+      margin-bottom: 100px;
+    }
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.25rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+    .project-card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-4px);
+    }
+    .project-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .project-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-weight: 600;
+    }
+    .project-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.5rem;
+    }
+    .project-highlight-box {
+      background: var(--bg-primary);
+      border-radius: 12px;
+      padding: 1rem;
+      border-right: 3px solid var(--accent);
+      font-size: 0.85rem;
+      color: var(--text-main);
+    }
+
+    /* مهارت‌ها */
+    .skills-section {
+      margin-bottom: 100px;
+    }
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-category {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 1.75rem;
+    }
+    .skill-category h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .skill-pill {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--text-main);
+    }
+
+    /* بخش تماس */
+    .contact-card {
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 3.5rem 2rem;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+    .contact-card h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* فوتر */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* رسپانسیو */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .hero-subtitle {
+        margin: 0 auto 2rem;
+      }
+      .hero-cta {
+        justify-content: center;
+      }
+      .nav-links {
+        display: none;
+      }
+      .award-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span>&lt;/&gt;</span> مسعود ولی‌زاده
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">فلسفه کاری</a></li>
+        <li><a href="#awards">افتخارات</a></li>
+        <li><a href="#projects">پروژه‌ها و تجربیات</a></li>
+        <li><a href="#skills">جعبه ابزار</a></li>
+        <li><a href="#contact">ارتباط</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="تغییر تم">🌙</button>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">همکاری با من</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span>⚡</span> رویکرد چابک داده‌محور & ضد تئاتر چابک
+        </div>
+        <h1>
+          مسعود ولی‌زاده<br />
+          <span class="highlight">اسکرام‌مستر و هماهنگ‌کننده تحویل فنی</span>
+        </h1>
+        <p class="hero-subtitle">
+          کارشناس مهندسی نرم‌افزار با تمرکز بر روان‌سازی جریان تحویل ارزش (Flow)، حذف اتلاف‌ها در چرخه SDLC و استقرار فرهنگ چابک مبتنی بر متریک‌های واقعی، نه جلسات صوری.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">مشاهده سوابق و پروژه‌ها</a>
+          <a href="#contact" class="btn btn-secondary">درخواست گفت‌وگو</a>
+        </div>
+      </div>
+      
+      <div class="profile-card">
+        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">چشم‌انداز عملیاتی</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem;">
+          تمرکز بر رفع گلوگاه‌های فنی، قراردادهای API و هماهنگی تیمی میان فرانت‌اند، بک‌اند و تست.
+        </p>
+        <div class="metric-box">
+          <div class="metric-item">
+            <div class="metric-number">۱۰۰٪</div>
+            <div class="metric-label">داده‌محور در اسپرینت</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">مقام اول</div>
+            <div class="metric-label">جشنواره شهید مدرس</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">SDLC</div>
+            <div class="metric-label">تسلط بر چرخه مهندسی</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">WIP</div>
+            <div class="metric-label">کنترل سقف کار در جریان</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="awards" class="container section-award">
+    <div class="award-card">
+      <div class="award-icon">🏆</div>
+      <div class="award-content">
+        <h3>کسب مقام اول در ششمین جشنواره شهید مدرس (مجلس شورای اسلامی)</h3>
+        <p>
+          ارائه و دفاع موفق از طرح <strong>«طراحی و استقرار سازوکار مشارکت سازمان‌های مردم‌نهاد در نظارت پارلمانی»</strong> (مشترک با دکتر سیاوش سیار ایرانی) در آذرماه ۱۴۰۴. این دستاورد نشان‌دهنده دیدگاه کلان، درک سیستمی از سازوکارهای فرآیندی و توانایی طراحی چارچوب‌های حاکمیتی و ساختاریافته است.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <div class="section-title-wrap">
+      <h2 class="section-title">فلسفه کاری و تخصص محوری</h2>
+      <p class="section-desc">چابکی واقعی در نتایج دلیوری است، نه در چسباندن استیکر روی دیوار یا برگزاری جلسات بی‌پایان.</p>
+    </div>
+
+    <div class="philosophy-grid">
+      <div class="philo-card">
+        <div class="philo-icon">🎯</div>
+        <h3>دیدگاه ضد «تئاتر چابک» (Anti-Agile Theater)</h3>
+        <p>
+          مقابله با جلسات تشریفاتی و فرمالیته. اسکرام واقعی زمانی اتفاق می‌افتد که موانع (Blockers) به شکل پیش‌دستانه شناسایی شوند و کیفیت تحویل محصول برای کاربر نهایی ارتقا یابد.
+        </p>
+      </div>
+
+      <div class="philo-card">
+        <div class="philo-icon">📊</div>
+        <h3>تصمیم‌گیری مبتنی بر داده (Data-Driven)</h3>
+        <p>
+          استفاده عملیاتی از نمودارهای جریان تجمعی (CFD)، شاخص‌های Lead Time، Cycle Time و پیش‌بینی‌پذیری تحویل به جای حدس و گمان‌های غیرواقعی در برنامه‌ریزی اسپرینت‌ها.
+        </p>
+      </div>
+
+      <div class="philo-card">
+        <div class="philo-icon">🤝</div>
+        <h3>مدیریت وابستگی‌های متقابل (API Dependencies)</h3>
+        <p>
+          ایجاد زبان مشترک میان توسعه‌دهندگان فرانت، بک‌اند و QA با تکیه بر Mock Servers و مستندسازی شفاف قراردادهای API در کانفلونس برای جلوگیری از توقف کار تیم‌ها.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="container">
+    <div class="section-title-wrap">
+      <h2 class="section-title">سوابق اجرایی و پروژه‌ها</h2>
+      <p class="section-desc">تجربه تسهیل‌گری در محصولات چندتخصصی و پلتفرم‌های پیچیده نرم‌افزاری</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div>
+          <div class="project-tags">
+            <span class="project-tag">Scrum Master</span>
+            <span class="project-tag">API Contracts</span>
+            <span class="project-tag">Dependency Tracking</span>
+          </div>
+          <h3>پروژه TrexNow & سیستم‌های دلیوری</h3>
+          <p>
+            تسهیل‌گری در چرخه اسپرینت، حل انسدادهای وابسته میان فرانت‌اند و بک‌اند با تعریف استانداردهای Mock Data و برگزاری نشست‌های هماهنگی چنداسکوادی جهت تضمین لانچ به‌موقع فیچرها.
+          </p>
+        </div>
+        <div class="project-highlight-box">
+          <strong>نتیجه کلیدی:</strong> کاهش زمان انتظار تیم فرانت‌اند و جلوگیری از بیکاری توسعه‌دهندگان حین توسعه همزمان سرویس‌های بک‌اند.
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div>
+          <div class="project-tags">
+            <span class="project-tag">Agile Coordination</span>
+            <span class="project-tag">FinTech / Payments</span>
+            <span class="project-tag">Jira Workflows</span>
+          </div>
+          <h3>پروژه‌های SocialOrder و QuesShare</h3>
+          <p>
+            هماهنگی و مدیریت جریان توسعه در پلتفرم‌های نرم‌افزاری، پیاده‌سازی متدولوژی‌های چابک، مدیریت اولویت‌های بک‌لاگ با مالکان محصول (PO) و شکستن نیازمندی‌های پیچیده به User Storyهای دقیق.
+          </p>
+        </div>
+        <div class="project-highlight-box">
+          <strong>نتیجه کلیدی:</strong> افزایش شفافیت اسپرینت‌ها و ارتقای دقت استیمیت‌ها با تکنیک‌های Planning Poker و استانداردسازی DoR/DoD.
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div>
+          <div class="project-tags">
+            <span class="project-tag">Software Engineering</span>
+            <span class="project-tag">Cross-functional</span>
+            <span class="project-tag">Continuous Delivery</span>
+          </div>
+          <h3>تسهیل‌گری در Innovative Future Software House & Apsy</h3>
+          <p>
+            هدایت رویدادهای اسکرام (Sprint Planning, Daily, Review, Retrospective)، مدیریت تعارضات سازمانی، حذف اضافه بار شناختی تیم و مانیتورینگ ظرفیت کاری (Capacity Planning) مهندسان.
+          </p>
+        </div>
+        <div class="project-highlight-box">
+          <strong>نتیجه کلیدی:</strong> تثبیت ریتم منظم ریلیزها و ارتقای روحیه همکاری بدون ورود به دام‌های مدیریت خرد (Micro-management).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="container skills-section">
+    <div class="section-title-wrap">
+      <h2 class="section-title">جعبه‌ابزار و صلاحیت‌های فنی</h2>
+      <p class="section-desc">ترکیب دانش مهندسی نرم‌افزار با متدهای رهبری خدمتگزار (Servant Leadership)</p>
+    </div>
+
+    <div class="skills-container">
+      <div class="skill-category">
+        <h4><span>🛠️</span> فریم‌ورک‌ها و اصول چابک</h4>
+        <div class="skill-pills">
+          <span class="skill-pill">Scrum Framework</span>
+          <span class="skill-pill">Kanban Principles</span>
+          <span class="skill-pill">Sprint Planning & Retro</span>
+          <span class="skill-pill">Backlog Refinement</span>
+          <span class="skill-pill">Definition of Done (DoD)</span>
+          <span class="skill-pill">Definition of Ready (DoR)</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4><span>📈</span> متریک‌های دلیوری و جریان کار</h4>
+        <div class="skill-pills">
+          <span class="skill-pill">Lead Time & Cycle Time</span>
+          <span class="skill-pill">Velocity & Predictability</span>
+          <span class="skill-pill">Cumulative Flow (CFD)</span>
+          <span class="skill-pill">WIP Limit Implementation</span>
+          <span class="skill-pill">Burndown / Burnup Charts</span>
+          <span class="skill-pill">Scope Trimming (MVP)</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4><span>💻</span> ابزارها و درک فنی</h4>
+        <div class="skill-pills">
+          <span class="skill-pill">Jira Software (Advanced)</span>
+          <span class="skill-pill">Confluence Docs</span>
+          <span class="skill-pill">Git & Version Control</span>
+          <span class="skill-pill">SDLC Understanding</span>
+          <span class="skill-pill">CI/CD Concepts</span>
+          <span class="skill-pill">API Contracts & Mocking</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4><span>💡</span> مهارت‌های نرم و تعاملات</h4>
+        <div class="skill-pills">
+          <span class="skill-pill">تسهیل‌گری و حل تعارضات</span>
+          <span class="skill-pill">تکنیک STAR در تحلیل</span>
+          <span class="skill-pill">محافظت از تیم (Shielding)</span>
+          <span class="skill-pill">جلسات مؤثر 1-on-1</span>
+          <span class="skill-pill">تفکر ساختاریافته سیستمی</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <div class="contact-card">
+      <h2>آماده خلق ارزش در تیم شما</h2>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+        اگر به دنبال استقرار یک فرآیند دلیوری پایدار، چابک و مبتنی بر نتایج ملموس در حوزه‌های فین‌تک، پلتفرم‌های مقیاس‌پذیر یا محصولات مدرن وب هستید، خوشحال می‌شوم با هم در ارتباط باشیم.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:contact@masoudvalizadeh.com" class="btn btn-primary">
+          <span>✉️</span> ارسال ایمیل
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-secondary">
+          <span>💼</span> لینکدین
+        </a>
+        <a href="#" class="btn btn-secondary">
+          <span>📄</span> دریافت رزومه (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© ۲۰۲۶ مسعود ولی‌زاده — طراحی شده بر پایه اصول دلیوری مهندسی و ارزش‌آفرینی چابک</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+
+    if (currentTheme === 'light') {
+      document.body.setAttribute('data-theme', 'light');
+      themeToggleBtn.textContent = '☀️';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isLight = document.body.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+        themeToggleBtn.textContent = '🌙';
+      } else {
+        document.body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggleBtn.textContent = '☀️';
+      }
+    });
+
+    // پیمایش نرم در منو
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
