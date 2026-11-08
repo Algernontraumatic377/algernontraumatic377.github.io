@@ -24,6 +24,18 @@
     a { color: #17477c; text-underline-offset: .2em; }
     a:focus-visible { outline: 2px solid #17477c; outline-offset: 4px; }
     header { padding: 3rem 0 2.5rem; }
+    #about { display: flex; align-items: center; gap: 2rem; }
+    .intro { flex: 1; min-width: 0; }
+    .portrait {
+      width: clamp(9rem, 30vw, 13rem);
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 58%;
+      border-radius: .75rem;
+    }
+    @media (max-width: 600px) {
+      #about { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    }
     .affiliation { color: #17477c; font-weight: 600; }
     h1, h2 { font-family: Georgia, serif; line-height: 1.2; }
     h1 { font-size: clamp(3rem, 8vw, 5rem); margin: .25rem 0 1rem; }
@@ -47,12 +59,16 @@
     </nav>
 
     <header id="about">
-      <p class="affiliation">Reliability Engineering &amp; Design Lab · Hanyang University</p>
-      <h1>Jaehun Kim</h1>
-      <p>I’m an integrated M.S./Ph.D. student in automotive engineering.
-        I study how manufacturing and assembly variation affect the
-        dynamics and reliability of electric vehicle motors.</p>
-      <a href="https://github.com/JaehunKim-422">GitHub profile</a>
+      <div class="intro">
+        <p class="affiliation">Reliability Engineering &amp; Design Lab · Hanyang University</p>
+        <h1>Jaehun Kim</h1>
+        <p>I’m an integrated M.S./Ph.D. student in automotive engineering.
+          I study how manufacturing and assembly variation affect the
+          dynamics and reliability of electric vehicle motors.</p>
+      </div>
+      <img class="portrait" src="./profile.jpg"
+        alt="Jaehun Kim in graduation attire at Hanyang University"
+        width="208" height="260" hidden onload="this.hidden = false">
     </header>
 
     <main>
