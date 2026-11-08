@@ -36,14 +36,13 @@
     @media (max-width: 600px) {
       #about { flex-direction: column; align-items: flex-start; gap: 1rem; }
     }
-    .affiliation { color: #17477c; font-weight: 600; }
     h1, h2 { font-family: Georgia, serif; line-height: 1.2; }
-    h1 { font-size: clamp(3rem, 8vw, 5rem); margin: .25rem 0 1rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); margin: .25rem 0 1rem; }
     h2 { font-size: 1.85rem; margin: 0 0 1rem; }
     h3 { font-size: 1.05rem; margin: 1rem 0 .25rem; }
     p { margin: 0 0 .85rem; }
     section, footer { border-top: 1px solid #cbd5e1; padding: 1.75rem 0; }
-    .timeline { border-left: 2px solid #9bb7d5; padding-left: 1rem; }
+    .timeline { border-left: 2px solid #9bb7d5; padding-left: 1.75rem; }
     .muted { color: #475569; }
   </style>
 </head>
@@ -59,38 +58,37 @@
     </nav>
 
     <header id="about">
+      <img class="portrait" src="./profile.jpg"
+        alt="Jaehun Kim in graduation attire at Hanyang University"
+        width="208" height="260" hidden onload="this.hidden = false">
       <div class="intro">
-        <p class="affiliation">Reliability Engineering &amp; Design Lab · Hanyang University</p>
         <h1>Jaehun Kim</h1>
         <p>I’m an integrated M.S./Ph.D. student in automotive engineering.
           I study how manufacturing and assembly variation affect the
           dynamics and reliability of electric vehicle motors.</p>
       </div>
-      <img class="portrait" src="./profile.jpg"
-        alt="Jaehun Kim in graduation attire at Hanyang University"
-        width="208" height="260" hidden onload="this.hidden = false">
     </header>
 
     <main>
       <section id="research">
         <h2>Research</h2>
-        <h3>Electric motor dynamics and bearing reliability</h3>
-        <p>I combine electromagnetic simulation with multibody dynamics
-          to study how rotor eccentricity affects bearing loads and
-          predicted bearing life in EV motors.</p>
-        <h3>Surrogate modeling for uncertainty quantification</h3>
-        <p>I use surrogate models to estimate how geometric variation
-          propagates through simulations to affect bearing loads and life.</p>
+        <ul>
+          <li>Multibody Dynamics</li>
+          <li>Surrogate Modeling</li>
+        </ul>
       </section>
 
       <section id="education">
         <h2>Education &amp; Experience</h2>
-        <div class="timeline">
-          <p class="affiliation">Current</p>
-          <h3>Hanyang University</h3>
-          <p>Integrated M.S./Ph.D. program · Reliability Engineering &amp; Design Lab</p>
-        </div>
-        <!-- Add earlier work, university, and high school entries here, newest first. -->
+        <h3>Education</h3>
+        <ul class="timeline">
+          <li><strong>2025–Present</strong> · Ph.D. candidate, Hanyang University</li>
+          <li><strong>2022–2025</strong> · Automotive Engineering, Hanyang University</li>
+          <li><strong>2017–2018</strong> · Mechanical Engineering, McMaster University</li>
+          <li><strong>Until 2017</strong> · Garibaldi Secondary</li>
+        </ul>
+        <h3>Experience</h3>
+        <p class="muted">Experience details will be added here.</p>
       </section>
 
       <section id="publications">
